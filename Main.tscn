@@ -1,27 +1,62 @@
-[gd_scene load_steps=3 format=3 uid="uid://jkildyvy7ixn"]
+[gd_scene load_steps=6 format=3 uid="uid://jkildyvy7ixn"]
 
-[ext_resource type="Script" path="res://drop_point.gd" id="1_k0erw"]
+[ext_resource type="Script" uid="uid://cd5r2fdbprtul" path="res://card_manager.gd" id="2_cm0pq"]
+[ext_resource type="Script" uid="uid://esdqyk4v1n07" path="res://Script/Card.gd" id="2_uu6xs"]
+[ext_resource type="Texture2D" uid="uid://bhm31yrp4tvj5" path="res://CardTextures/Minchiate_card_deck_-_Florence_-_1860-1890_-_Back.jpg" id="3_fos0i"]
+[ext_resource type="Script" uid="uid://twg2jks6sww0" path="res://Script/StyleBoxRect.gd" id="4_cm0pq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pn8h2"]
-size = Vector2(128, 128)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cm0pq"]
+bg_color = Color(0.73300546, 0.7330054, 0.7330054, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0.64705884, 0.64705884, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0, 0, 0, 0)
 
-[node name="Main" type="Node2D"]
-
-[node name="DropPoint" type="StaticBody2D" parent="."]
-script = ExtResource("1_k0erw")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DropPoint"]
-shape = SubResource("RectangleShape2D_pn8h2")
-
-[node name="ColorRect" type="ColorRect" parent="DropPoint"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -64.0
-offset_right = 64.0
-offset_bottom = 64.0
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="CardManager" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_cm0pq")
+
+[node name="Card" type="TextureRect" parent="CardManager"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 60.0
+offset_right = 105.0
+offset_bottom = 180.0
+texture = ExtResource("3_fos0i")
+expand_mode = 1
+script = ExtResource("2_uu6xs")
+texture_back = ExtResource("3_fos0i")
+card_name = &"T"
+
+[node name="StyleBoxRect" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 7.0
+offset_right = 45.0
+offset_bottom = 56.0
+script = ExtResource("4_cm0pq")
+style_box = SubResource("StyleBoxFlat_cm0pq")
+radius = 5
+bg_color = Color(0.73300546, 0.7330054, 0.7330054, 0)
+border_color = Color(0, 0.64705884, 0.64705884, 1)
+metadata/_custom_type_script = "uid://twg2jks6sww0"
