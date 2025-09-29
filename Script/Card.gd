@@ -2,7 +2,7 @@
 extends TextureRect
 class_name Card
 #enum Suit {FIRE, WATER, AIR, EARTH}
-@export var deck_num : int = 0
+@export var deck : Deck
 
 enum Suits {BATONS, CUPS, SWORDS, COINS, TRUMPS}
 @export var suit : Suits = Suits.BATONS 

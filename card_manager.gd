@@ -3,7 +3,10 @@ extends Control
 
 class_name CardManager
 @export var starting_drop : CardDrop
-@export var deck_positions : PackedVector2Array = []
+@export var decks : Array[Deck] :
+	set(value):
+		decks = value
+		print("decks: ", decks)
 
 @export_range(0.01,10.0, 0.001, "height / width") var card_aspect_ratio : float = 12.0/7.0 : 
 	set(value):
@@ -41,13 +44,14 @@ var pile_offset : float = 1.0
 
 func _ready() -> void:
 	if starting_drop:
-		deck_positions.append(starting_drop.global_position)
+		new_deck_from(starting_drop)
+
 		
 	set_mouse_filter(Control.MOUSE_FILTER_IGNORE)
 	
 	for c in get_children():
-		c.deck = 0
-		c.position = deck_positions[0]
+		if decks[0]:
+			c.position = decks[0].position
 		set_card_size(c)
 		c.manager = self
 
@@ -67,12 +71,16 @@ func _process(_delta: float) -> void:
 			card_dragging.set_mouse_filter(Control.MOUSE_FILTER_PASS)
 			card_dragging.set_hover(false)
 			if card_drop:
-				card_dragging.prev_position = card_drop.position
-				card_dragging.free_placement = false
+				if not card_drop.deck:
+					new_deck_from(card_drop)
+				card_drop.deck.add_card(card_dragging)
+				#card_dragging.prev_position = card_drop.position
+				#card_dragging.free_placement = false
 			else:
-				card_dragging.free_placement = true
-			if not card_dragging.free_placement:
-				move_card(card_dragging, card_dragging.prev_position, move_speed)
+				#card_dragging.free_placement = true
+				pass
+			if card_dragging.deck:
+				move_card(card_dragging, card_dragging.deck.position, move_speed)
 			card_dragging = null
 			
 		else:
@@ -86,18 +94,24 @@ func set_card_size(c: Card) ->void:
 	c.size = card_size
 	c.pivot_offset = card_size/2.0
 
-#
 func set_card_hovering(_card_hovering: Card):
 	if card_dragging:
 
 		if _card_hovering:
 			if _card_hovering.is_card_drop:
 				card_drop = _card_hovering
+				if not card_drop.deck:
+					new_deck_from(card_drop)
+				card_drop.deck.add_card(card_dragging)
 		else:
-			card_dragging.free_placement = true
+			#card_dragging.free_placement = true
+			if card_drop:
+				card_drop.deck.remove_card(card_dragging)
+				decks.erase(card_drop.deck)
 			card_drop = null
 		return
-		
+	
+	
 	if card_hovering and _card_hovering == null:
 		card_hovering.set_hover(false)
 
@@ -108,14 +122,23 @@ func set_card_hovering(_card_hovering: Card):
 	
 #
 func move_card(_card: Card, _pos: Vector2, _speed: float)->void:
-	if position_tween and position_tween.is_valid():
+	if position_tween and po_sition_tween.is_valid():
 			position_tween.kill()
 			position_tween = null
 	position_tween = create_tween()
 	position_tween.set_parallel(true)
 	position_tween.tween_property(_card, "position", _pos, _speed)
 	#
-#
+func new_deck_from(_card: Card)->void:
+	var d := Deck.new()
+	d.add_card(_card)
+	d.position = _card.position
+	decks.append(d)
+
+func set_card_drop(_card: Card)->void:
+	card_drop = _card
+	
+	
 			#
 		#
 			#

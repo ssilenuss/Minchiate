@@ -3,7 +3,6 @@ extends Card
 class_name CardDrop
 
 @export var card_manager: CardManager
-@export var can_drop : bool = false
 
 @export_category("Style")
 @export var style_box : StyleBoxFlat = StyleBoxFlat.new()
@@ -40,15 +39,16 @@ func _draw() -> void:
 	draw_style_box(style_box, Rect2(Vector2.ZERO, size))
 	
 func _on_mouse_entered()->void:
-
+	
 	if card_manager.card_dragging:
-		if can_drop:
-			card_manager.card_drop = self
+		if is_card_drop:
+			card_manager.set_card_drop(self)
 			bg_color= Color(0,1,0,0.5)
 		else:
 			bg_color = Color(1,0,0,0.5)
 
 	
 func _on_mouse_exited()->void:
-	card_manager.card_drop = null
+	card_manager.set_card_drop(null)
+	#card_manager.card_drop = null
 	bg_color.a = 0.0
