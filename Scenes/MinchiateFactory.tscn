@@ -1,0 +1,968 @@
+[gd_scene load_steps=102 format=3 uid="uid://c8fd3uitvoir4"]
+
+[ext_resource type="Script" uid="uid://dvy6yks7abm0f" path="res://MinchiateCardFactory.gd" id="1_1iqcu"]
+[ext_resource type="Material" uid="uid://da1f3qo6ociqs" path="res://Materials/RoundedCorners.material" id="2_egmo6"]
+[ext_resource type="Texture2D" uid="uid://dusihb1eonhi1" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_01.jpg" id="3_6bgd4"]
+[ext_resource type="Script" uid="uid://esdqyk4v1n07" path="res://Script/Card.gd" id="6_54h2m"]
+[ext_resource type="Texture2D" uid="uid://dotonvcem6du7" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_02.jpg" id="6_fkwo0"]
+[ext_resource type="Texture2D" uid="uid://cexa3xwg5dyiq" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_03.jpg" id="7_644uk"]
+[ext_resource type="Texture2D" uid="uid://bhm31yrp4tvj5" path="res://CardTextures/Minchiate_card_deck_-_Florence_-_1860-1890_-_Back.jpg" id="7_svd2l"]
+[ext_resource type="Texture2D" uid="uid://oe23uifpbhiw" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_04.jpg" id="8_klak6"]
+[ext_resource type="Texture2D" uid="uid://dle551vwxxq1q" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_05.jpg" id="9_ms2u4"]
+[ext_resource type="Texture2D" uid="uid://deltyg3tcq7i8" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_06.jpg" id="10_h1dqw"]
+[ext_resource type="Texture2D" uid="uid://d0b4cvef6w0hy" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_07.jpg" id="11_5xcl4"]
+[ext_resource type="Texture2D" uid="uid://dnqk1y4o3d1hp" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_08.jpg" id="12_8mwr1"]
+[ext_resource type="Texture2D" uid="uid://d38r553to0r2d" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_09.jpg" id="13_ea1ad"]
+[ext_resource type="Texture2D" uid="uid://gq2jbkuyotuh" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_10.jpg" id="14_t5eip"]
+[ext_resource type="Texture2D" uid="uid://dhprtt7p6w3k1" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_11_-_Jack.jpg" id="15_5xd3h"]
+[ext_resource type="Texture2D" uid="uid://goq0qymsl0x1" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_12_-_Knight.jpg" id="16_p2vv7"]
+[ext_resource type="Texture2D" uid="uid://bqi2xxg1oloc" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_13_-_Queen.jpg" id="17_s4mtx"]
+[ext_resource type="Texture2D" uid="uid://bpj2d4aru2ovt" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_14_-_King.jpg" id="18_6kbfb"]
+[ext_resource type="Texture2D" uid="uid://cki77o76rhn0m" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_01.jpg" id="19_hydga"]
+[ext_resource type="Texture2D" uid="uid://8xvk2eldsdnl" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_02.jpg" id="20_7i3rt"]
+[ext_resource type="Texture2D" uid="uid://dkrb1nmab72lf" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_03.jpg" id="21_nsrbl"]
+[ext_resource type="Texture2D" uid="uid://dxyp4qtnwyj7h" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_04.jpg" id="22_mc3d3"]
+[ext_resource type="Texture2D" uid="uid://1nvo6dwcqh5v" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_05.jpg" id="23_cjr6p"]
+[ext_resource type="Texture2D" uid="uid://os0ljl2fcr1w" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_06.jpg" id="24_bfrdu"]
+[ext_resource type="Texture2D" uid="uid://cconllwdl2ef" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_07.jpg" id="25_dupvd"]
+[ext_resource type="Texture2D" uid="uid://dljdj07walygx" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_08.jpg" id="26_u1yn2"]
+[ext_resource type="Texture2D" uid="uid://bfe5bvqo4dhbs" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_09.jpg" id="27_vd1xu"]
+[ext_resource type="Texture2D" uid="uid://cgrgsufw41yim" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_10.jpg" id="28_tn8ax"]
+[ext_resource type="Texture2D" uid="uid://dncec21f6w4p4" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_11_-_Jack.jpg" id="29_103gj"]
+[ext_resource type="Texture2D" uid="uid://c0h3ws0430x3k" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_12_-_Knight.jpg" id="30_2j7qh"]
+[ext_resource type="Texture2D" uid="uid://buvont8hyau2a" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_13_-_Queen.jpg" id="31_nnqqi"]
+[ext_resource type="Texture2D" uid="uid://cmchu4c134428" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_14_-_King.jpg" id="32_62mta"]
+[ext_resource type="Texture2D" uid="uid://b2t2x688lwpy7" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_01.jpg" id="33_e7bd4"]
+[ext_resource type="Texture2D" uid="uid://vfo346vbvh5x" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_02.jpg" id="34_gmfrv"]
+[ext_resource type="Texture2D" uid="uid://dtqg35bhybc7y" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_03.jpg" id="35_x55hr"]
+[ext_resource type="Texture2D" uid="uid://5rcq83krfgak" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_04.jpg" id="36_vrqr5"]
+[ext_resource type="Texture2D" uid="uid://bf2vwsrrugn84" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_05.jpg" id="37_nrwns"]
+[ext_resource type="Texture2D" uid="uid://cahp52c0bwc6s" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_06.jpg" id="38_4rkq1"]
+[ext_resource type="Texture2D" uid="uid://b5vxnipvb2iib" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_07.jpg" id="39_e1vhd"]
+[ext_resource type="Texture2D" uid="uid://k6sex25wswf0" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_08.jpg" id="40_yj2qi"]
+[ext_resource type="Texture2D" uid="uid://bwsttwnlaenar" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_09.jpg" id="41_b8dyk"]
+[ext_resource type="Texture2D" uid="uid://5j35f5222263" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_10.jpg" id="42_0jg4s"]
+[ext_resource type="Texture2D" uid="uid://7m4fcrfan2ac" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_11_-_Jack.jpg" id="43_voitm"]
+[ext_resource type="Texture2D" uid="uid://dbi3rw2qhlpj0" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_12_-_Knight.jpg" id="44_b27lb"]
+[ext_resource type="Texture2D" uid="uid://ewydbau5ge8k" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_13_-_Queen.jpg" id="45_x4cec"]
+[ext_resource type="Texture2D" uid="uid://b37tatmbfeny0" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_14_-_King.jpg" id="46_2au7d"]
+[ext_resource type="Texture2D" uid="uid://clfp1ey6g27bp" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_01.jpg" id="47_pvey1"]
+[ext_resource type="Texture2D" uid="uid://engcasrdbn2" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_02.jpg" id="48_wgtxu"]
+[ext_resource type="Texture2D" uid="uid://cael6172laien" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_03.jpg" id="49_g21lx"]
+[ext_resource type="Texture2D" uid="uid://dfoym665cused" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_04.jpg" id="50_at73o"]
+[ext_resource type="Texture2D" uid="uid://bil3mvegpxohy" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_05.jpg" id="51_gf6a5"]
+[ext_resource type="Texture2D" uid="uid://piqktpoycafa" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_06.jpg" id="52_ohyfa"]
+[ext_resource type="Texture2D" uid="uid://c7de67al8ir2x" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_07.jpg" id="53_g6n8u"]
+[ext_resource type="Texture2D" uid="uid://darptboybxebn" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_08.jpg" id="54_dg5bh"]
+[ext_resource type="Texture2D" uid="uid://0g0nefhrneuj" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_09.jpg" id="55_vaniy"]
+[ext_resource type="Texture2D" uid="uid://d00q5bnfup7h2" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_10.jpg" id="56_s5sxi"]
+[ext_resource type="Texture2D" uid="uid://bpit6evin7b3q" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_11_-_Jack.jpg" id="57_kde2w"]
+[ext_resource type="Texture2D" uid="uid://ftmmh7ssa13l" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_12_-_Knight.jpg" id="58_wlrxq"]
+[ext_resource type="Texture2D" uid="uid://cm86fld0a6nsg" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_13_-_Queen.jpg" id="59_bdsef"]
+[ext_resource type="Texture2D" uid="uid://bxxfnsrlxcjp8" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_14_-_King.jpg" id="60_qk7rf"]
+[ext_resource type="Texture2D" uid="uid://cdno3kx7hu10u" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_01_-_Papa_uno.jpg" id="61_da804"]
+[ext_resource type="Texture2D" uid="uid://cmdmgpq5keu7r" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_02_-_Papa_due.jpg" id="62_03d3p"]
+[ext_resource type="Texture2D" uid="uid://dtem41jpnj6i4" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_03_-_Papa_tre.jpg" id="63_wgbo5"]
+[ext_resource type="Texture2D" uid="uid://dxo14xg4473oy" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_04_-_Papa_quattro.jpg" id="64_2rifj"]
+[ext_resource type="Texture2D" uid="uid://p8o340onqlio" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_05_-_Papa_cinque.jpg" id="65_rnw3c"]
+[ext_resource type="Texture2D" uid="uid://dki4ci6kivl48" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_06_-_La_Temperanza.jpg" id="66_7dtp2"]
+[ext_resource type="Texture2D" uid="uid://dxhhsactdrelp" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_07_-_La_Forza.jpg" id="67_721cf"]
+[ext_resource type="Texture2D" uid="uid://bib23raedvfhu" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_08_-_La_Giustizia.jpg" id="68_gwhvo"]
+[ext_resource type="Texture2D" uid="uid://d0suumpeoaw8e" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_09_-_La_Ruota_della_Fortuna.jpg" id="69_igxsu"]
+[ext_resource type="Texture2D" uid="uid://7kenclcpu10e" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_10_-_Il_Carro.jpg" id="70_huj8q"]
+[ext_resource type="Texture2D" uid="uid://cuouvvpxn6ll5" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_11_-_Il_Gobbo.jpg" id="71_wumvg"]
+[ext_resource type="Texture2D" uid="uid://ct2d3ieijxr6o" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_12_-_L'Impiccato.jpg" id="72_qxd83"]
+[ext_resource type="Texture2D" uid="uid://dlbe1qbnoea3u" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_13_-_La_Morte.jpg" id="73_kg2t8"]
+[ext_resource type="Texture2D" uid="uid://dkxbr0cmkbhoo" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_14_-_Il_Diavolo.jpg" id="74_bl365"]
+[ext_resource type="Texture2D" uid="uid://coj3jwk1bvk50" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_15_-_La_Casa_del_Diavolo.jpg" id="75_d05yf"]
+[ext_resource type="Texture2D" uid="uid://de1wclby062ft" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_16_-_La_Speranza.jpg" id="76_2tvka"]
+[ext_resource type="Texture2D" uid="uid://b758f7xtp05xm" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_17_-_La_Prudenza.jpg" id="77_wcnbx"]
+[ext_resource type="Texture2D" uid="uid://dse8b6uv4lhmn" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_18_-_La_Fede.jpg" id="78_cffwj"]
+[ext_resource type="Texture2D" uid="uid://dpd2lcspbdfo6" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_19_-_La_Carità.jpg" id="79_0v36m"]
+[ext_resource type="Texture2D" uid="uid://blbj275gjhs70" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_20_-_Il_Fuoco.jpg" id="80_ddxdl"]
+[ext_resource type="Texture2D" uid="uid://irjr1bkdcm54" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_21_-_L'Acqua.jpg" id="81_hmmo0"]
+[ext_resource type="Texture2D" uid="uid://c6gq3emikf4ap" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_22_-_La_Terra.jpg" id="82_d5a8g"]
+[ext_resource type="Texture2D" uid="uid://brd1b5edl1gls" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_23_-_L'Aria.jpg" id="83_i35t0"]
+[ext_resource type="Texture2D" uid="uid://c7moyctmyjvqr" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_24_-_La_Bilancia.jpg" id="84_vfp21"]
+[ext_resource type="Texture2D" uid="uid://b1ivav8ak0gg2" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_25_-_La_Vergine.jpg" id="85_okmeu"]
+[ext_resource type="Texture2D" uid="uid://2xh6j5v28sog" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_26_-_Il_Scorpione.jpg" id="86_8g3le"]
+[ext_resource type="Texture2D" uid="uid://but6gv5ch5p1o" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_27_-_L'Ariete.jpg" id="87_hjsj1"]
+[ext_resource type="Texture2D" uid="uid://5varho4mdvlp" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_28_-_Il_Capricorno.jpg" id="88_5a0bv"]
+[ext_resource type="Texture2D" uid="uid://do2buf6bvepay" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_29_-_Il_Sagittario.jpg" id="89_tdi0u"]
+[ext_resource type="Texture2D" uid="uid://x0la70v866ct" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_30_-_Il_Cancro.jpg" id="90_fkd7b"]
+[ext_resource type="Texture2D" uid="uid://dyhrcsj5rap5e" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_31_-_I_Pesci.jpg" id="91_ta5cc"]
+[ext_resource type="Texture2D" uid="uid://gyuijkyrqxlr" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_32_-_L'Acquario.jpg" id="92_b2gyk"]
+[ext_resource type="Texture2D" uid="uid://bg45225k3luu5" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_33_-_Il_Leone.jpg" id="93_b3hut"]
+[ext_resource type="Texture2D" uid="uid://b3dupudcje03h" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_34_-_Il_Toro.jpg" id="94_8mid8"]
+[ext_resource type="Texture2D" uid="uid://c81r8tdrnl1xe" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_35_-_I_Gemelli.jpg" id="95_tyn1e"]
+[ext_resource type="Texture2D" uid="uid://dx01w0an353dj" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_36_-_La_Stella.jpg" id="96_n3q4e"]
+[ext_resource type="Texture2D" uid="uid://cfl6fep4m8ug1" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_37_-_La_Luna.jpg" id="97_4be6n"]
+[ext_resource type="Texture2D" uid="uid://dj2hip5kx3p2e" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_38_-_Il_Sole.jpg" id="98_7bx6c"]
+[ext_resource type="Texture2D" uid="uid://c0m6asof5l4e7" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_39_-_Il_Mondo.jpg" id="99_xp7i1"]
+[ext_resource type="Texture2D" uid="uid://xg46nxib3t03" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_40_-_Le_Trombe.jpg" id="100_1gram"]
+[ext_resource type="Texture2D" uid="uid://c8tprd0e8h2ds" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_Il_Matto.jpg" id="101_pdy4v"]
+
+[node name="MinchiateCardFactory" type="Node"]
+script = ExtResource("1_1iqcu")
+card_fronts_dir = "res://CardTextures/FlorenceFront"
+card_material = ExtResource("2_egmo6")
+
+[node name="MinchiateDeck" type="Node2D" parent="."]
+
+[node name="01 of Batons" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+value = 1
+texture_front = ExtResource("3_6bgd4")
+texture_back = ExtResource("7_svd2l")
+
+[node name="02 of Batons" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+value = 2
+texture_front = ExtResource("6_fkwo0")
+texture_back = ExtResource("7_svd2l")
+
+[node name="03 of Batons" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+value = 3
+texture_front = ExtResource("7_644uk")
+texture_back = ExtResource("7_svd2l")
+
+[node name="04 of Batons" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+value = 4
+texture_front = ExtResource("8_klak6")
+texture_back = ExtResource("7_svd2l")
+
+[node name="05 of Batons" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+value = 5
+texture_front = ExtResource("9_ms2u4")
+texture_back = ExtResource("7_svd2l")
+
+[node name="06 of Batons" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+value = 6
+texture_front = ExtResource("10_h1dqw")
+texture_back = ExtResource("7_svd2l")
+
+[node name="07 of Batons" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+value = 7
+texture_front = ExtResource("11_5xcl4")
+texture_back = ExtResource("7_svd2l")
+
+[node name="08 of Batons" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+value = 8
+texture_front = ExtResource("12_8mwr1")
+texture_back = ExtResource("7_svd2l")
+
+[node name="09 of Batons" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+value = 9
+texture_front = ExtResource("13_ea1ad")
+texture_back = ExtResource("7_svd2l")
+
+[node name="10 of Batons" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+value = 10
+texture_front = ExtResource("14_t5eip")
+texture_back = ExtResource("7_svd2l")
+
+[node name="11 of Batons" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+value = 11
+texture_front = ExtResource("15_5xd3h")
+texture_back = ExtResource("7_svd2l")
+
+[node name="12 of Batons" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+value = 12
+texture_front = ExtResource("16_p2vv7")
+texture_back = ExtResource("7_svd2l")
+
+[node name="13 of Batons" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+value = 13
+texture_front = ExtResource("17_s4mtx")
+texture_back = ExtResource("7_svd2l")
+
+[node name="14 of Batons" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+value = 13
+texture_front = ExtResource("18_6kbfb")
+texture_back = ExtResource("7_svd2l")
+
+[node name="01 of Coins" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 3
+value = 1
+texture_front = ExtResource("19_hydga")
+texture_back = ExtResource("7_svd2l")
+
+[node name="02 of Coins" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 3
+value = 2
+texture_front = ExtResource("20_7i3rt")
+texture_back = ExtResource("7_svd2l")
+
+[node name="03 of Coins" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 3
+value = 3
+texture_front = ExtResource("21_nsrbl")
+texture_back = ExtResource("7_svd2l")
+
+[node name="04 of Coins" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 3
+value = 4
+texture_front = ExtResource("22_mc3d3")
+texture_back = ExtResource("7_svd2l")
+
+[node name="05 of Coins" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 3
+value = 5
+texture_front = ExtResource("23_cjr6p")
+texture_back = ExtResource("7_svd2l")
+
+[node name="06 of Coins" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 3
+value = 6
+texture_front = ExtResource("24_bfrdu")
+texture_back = ExtResource("7_svd2l")
+
+[node name="07 of Coins" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 3
+value = 7
+texture_front = ExtResource("25_dupvd")
+texture_back = ExtResource("7_svd2l")
+
+[node name="08 of Coins" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 3
+value = 8
+texture_front = ExtResource("26_u1yn2")
+texture_back = ExtResource("7_svd2l")
+
+[node name="09 of Coins" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 3
+value = 9
+texture_front = ExtResource("27_vd1xu")
+texture_back = ExtResource("7_svd2l")
+
+[node name="10 of Coins" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 3
+value = 10
+texture_front = ExtResource("28_tn8ax")
+texture_back = ExtResource("7_svd2l")
+
+[node name="11 of Coins" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 3
+value = 11
+texture_front = ExtResource("29_103gj")
+texture_back = ExtResource("7_svd2l")
+
+[node name="12 of Coins" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 3
+value = 12
+texture_front = ExtResource("30_2j7qh")
+texture_back = ExtResource("7_svd2l")
+
+[node name="13 of Coins" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 3
+value = 13
+texture_front = ExtResource("31_nnqqi")
+texture_back = ExtResource("7_svd2l")
+
+[node name="14 of Coins" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 3
+value = 13
+texture_front = ExtResource("32_62mta")
+texture_back = ExtResource("7_svd2l")
+
+[node name="01 of Cups" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 1
+value = 1
+texture_front = ExtResource("33_e7bd4")
+texture_back = ExtResource("7_svd2l")
+
+[node name="02 of Cups" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 1
+value = 2
+texture_front = ExtResource("34_gmfrv")
+texture_back = ExtResource("7_svd2l")
+
+[node name="03 of Cups" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 1
+value = 3
+texture_front = ExtResource("35_x55hr")
+texture_back = ExtResource("7_svd2l")
+
+[node name="04 of Cups" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 1
+value = 4
+texture_front = ExtResource("36_vrqr5")
+texture_back = ExtResource("7_svd2l")
+
+[node name="05 of Cups" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 1
+value = 5
+texture_front = ExtResource("37_nrwns")
+texture_back = ExtResource("7_svd2l")
+
+[node name="06 of Cups" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 1
+value = 6
+texture_front = ExtResource("38_4rkq1")
+texture_back = ExtResource("7_svd2l")
+
+[node name="07 of Cups" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 1
+value = 7
+texture_front = ExtResource("39_e1vhd")
+texture_back = ExtResource("7_svd2l")
+
+[node name="08 of Cups" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 1
+value = 8
+texture_front = ExtResource("40_yj2qi")
+texture_back = ExtResource("7_svd2l")
+
+[node name="09 of Cups" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 1
+value = 9
+texture_front = ExtResource("41_b8dyk")
+texture_back = ExtResource("7_svd2l")
+
+[node name="10 of Cups" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 1
+value = 10
+texture_front = ExtResource("42_0jg4s")
+texture_back = ExtResource("7_svd2l")
+
+[node name="11 of Cups" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 1
+value = 11
+texture_front = ExtResource("43_voitm")
+texture_back = ExtResource("7_svd2l")
+
+[node name="12 of Cups" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 1
+value = 12
+texture_front = ExtResource("44_b27lb")
+texture_back = ExtResource("7_svd2l")
+
+[node name="13 of Cups" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 1
+value = 13
+texture_front = ExtResource("45_x4cec")
+texture_back = ExtResource("7_svd2l")
+
+[node name="14 of Cups" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 1
+value = 13
+texture_front = ExtResource("46_2au7d")
+texture_back = ExtResource("7_svd2l")
+
+[node name="01 of Swords" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 2
+value = 1
+texture_front = ExtResource("47_pvey1")
+texture_back = ExtResource("7_svd2l")
+
+[node name="02 of Swords" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 2
+value = 2
+texture_front = ExtResource("48_wgtxu")
+texture_back = ExtResource("7_svd2l")
+
+[node name="03 of Swords" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 2
+value = 3
+texture_front = ExtResource("49_g21lx")
+texture_back = ExtResource("7_svd2l")
+
+[node name="04 of Swords" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 2
+value = 4
+texture_front = ExtResource("50_at73o")
+texture_back = ExtResource("7_svd2l")
+
+[node name="05 of Swords" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 2
+value = 5
+texture_front = ExtResource("51_gf6a5")
+texture_back = ExtResource("7_svd2l")
+
+[node name="06 of Swords" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 2
+value = 6
+texture_front = ExtResource("52_ohyfa")
+texture_back = ExtResource("7_svd2l")
+
+[node name="07 of Swords" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 2
+value = 7
+texture_front = ExtResource("53_g6n8u")
+texture_back = ExtResource("7_svd2l")
+
+[node name="08 of Swords" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 2
+value = 8
+texture_front = ExtResource("54_dg5bh")
+texture_back = ExtResource("7_svd2l")
+
+[node name="09 of Swords" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 2
+value = 9
+texture_front = ExtResource("55_vaniy")
+texture_back = ExtResource("7_svd2l")
+
+[node name="10 of Swords" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 2
+value = 10
+texture_front = ExtResource("56_s5sxi")
+texture_back = ExtResource("7_svd2l")
+
+[node name="11 of Swords" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 2
+value = 11
+texture_front = ExtResource("57_kde2w")
+texture_back = ExtResource("7_svd2l")
+
+[node name="12 of Swords" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 2
+value = 12
+texture_front = ExtResource("58_wlrxq")
+texture_back = ExtResource("7_svd2l")
+
+[node name="13 of Swords" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 2
+value = 13
+texture_front = ExtResource("59_bdsef")
+texture_back = ExtResource("7_svd2l")
+
+[node name="14 of Swords" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 2
+value = 13
+texture_front = ExtResource("60_qk7rf")
+texture_back = ExtResource("7_svd2l")
+
+[node name="01 Papa_uno" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 1
+texture_front = ExtResource("61_da804")
+texture_back = ExtResource("7_svd2l")
+
+[node name="02 Papa_due" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 2
+texture_front = ExtResource("62_03d3p")
+texture_back = ExtResource("7_svd2l")
+
+[node name="03 Papa_tre" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 3
+texture_front = ExtResource("63_wgbo5")
+texture_back = ExtResource("7_svd2l")
+
+[node name="04 Papa_quattro" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 4
+texture_front = ExtResource("64_2rifj")
+texture_back = ExtResource("7_svd2l")
+
+[node name="05 Papa_cinque" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 5
+texture_front = ExtResource("65_rnw3c")
+texture_back = ExtResource("7_svd2l")
+
+[node name="06 La_Temperanza" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 6
+texture_front = ExtResource("66_7dtp2")
+texture_back = ExtResource("7_svd2l")
+
+[node name="07 La_Forza" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 7
+texture_front = ExtResource("67_721cf")
+texture_back = ExtResource("7_svd2l")
+
+[node name="08 La_Giustizia" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 8
+texture_front = ExtResource("68_gwhvo")
+texture_back = ExtResource("7_svd2l")
+
+[node name="09 La_Ruota_della_Fortuna" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 9
+texture_front = ExtResource("69_igxsu")
+texture_back = ExtResource("7_svd2l")
+
+[node name="10 Il_Carro" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 10
+texture_front = ExtResource("70_huj8q")
+texture_back = ExtResource("7_svd2l")
+
+[node name="11 Il_Gobbo" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 11
+texture_front = ExtResource("71_wumvg")
+texture_back = ExtResource("7_svd2l")
+
+[node name="12 L\'Impiccato" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 12
+texture_front = ExtResource("72_qxd83")
+texture_back = ExtResource("7_svd2l")
+
+[node name="13 La_Morte" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 13
+texture_front = ExtResource("73_kg2t8")
+texture_back = ExtResource("7_svd2l")
+
+[node name="14 Il_Diavolo" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 14
+texture_front = ExtResource("74_bl365")
+texture_back = ExtResource("7_svd2l")
+
+[node name="15 La_Casa_del_Diavolo" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 15
+texture_front = ExtResource("75_d05yf")
+texture_back = ExtResource("7_svd2l")
+
+[node name="16 La_Speranza" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 16
+texture_front = ExtResource("76_2tvka")
+texture_back = ExtResource("7_svd2l")
+
+[node name="17 La_Prudenza" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 17
+texture_front = ExtResource("77_wcnbx")
+texture_back = ExtResource("7_svd2l")
+
+[node name="18 La_Fede" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 18
+texture_front = ExtResource("78_cffwj")
+texture_back = ExtResource("7_svd2l")
+
+[node name="19 La_Carità" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 19
+texture_front = ExtResource("79_0v36m")
+texture_back = ExtResource("7_svd2l")
+
+[node name="20 Il_Fuoco" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 20
+texture_front = ExtResource("80_ddxdl")
+texture_back = ExtResource("7_svd2l")
+
+[node name="21 L\'Acqua" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 21
+texture_front = ExtResource("81_hmmo0")
+texture_back = ExtResource("7_svd2l")
+
+[node name="22 La_Terra" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 22
+texture_front = ExtResource("82_d5a8g")
+texture_back = ExtResource("7_svd2l")
+
+[node name="23 L\'Aria" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 23
+texture_front = ExtResource("83_i35t0")
+texture_back = ExtResource("7_svd2l")
+
+[node name="24 La_Bilancia" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 24
+texture_front = ExtResource("84_vfp21")
+texture_back = ExtResource("7_svd2l")
+
+[node name="25 La_Vergine" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 25
+texture_front = ExtResource("85_okmeu")
+texture_back = ExtResource("7_svd2l")
+
+[node name="26 Il_Scorpione" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 26
+texture_front = ExtResource("86_8g3le")
+texture_back = ExtResource("7_svd2l")
+
+[node name="27 L\'Ariete" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 27
+texture_front = ExtResource("87_hjsj1")
+texture_back = ExtResource("7_svd2l")
+
+[node name="28 Il_Capricorno" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 28
+texture_front = ExtResource("88_5a0bv")
+texture_back = ExtResource("7_svd2l")
+
+[node name="29 Il_Sagittario" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 29
+texture_front = ExtResource("89_tdi0u")
+texture_back = ExtResource("7_svd2l")
+
+[node name="30 Il_Cancro" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 30
+texture_front = ExtResource("90_fkd7b")
+texture_back = ExtResource("7_svd2l")
+
+[node name="31 I_Pesci" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 31
+texture_front = ExtResource("91_ta5cc")
+texture_back = ExtResource("7_svd2l")
+
+[node name="32 L\'Acquario" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 32
+texture_front = ExtResource("92_b2gyk")
+texture_back = ExtResource("7_svd2l")
+
+[node name="33 Il_Leone" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 33
+texture_front = ExtResource("93_b3hut")
+texture_back = ExtResource("7_svd2l")
+
+[node name="34 Il_Toro" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 34
+texture_front = ExtResource("94_8mid8")
+texture_back = ExtResource("7_svd2l")
+
+[node name="35 I_Gemelli" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 35
+texture_front = ExtResource("95_tyn1e")
+texture_back = ExtResource("7_svd2l")
+
+[node name="36 La_Stella" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 36
+texture_front = ExtResource("96_n3q4e")
+texture_back = ExtResource("7_svd2l")
+
+[node name="37 La_Luna" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 37
+texture_front = ExtResource("97_4be6n")
+texture_back = ExtResource("7_svd2l")
+
+[node name="38 Il_Sole" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 38
+texture_front = ExtResource("98_7bx6c")
+texture_back = ExtResource("7_svd2l")
+
+[node name="39 Il_Mondo" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 39
+texture_front = ExtResource("99_xp7i1")
+texture_back = ExtResource("7_svd2l")
+
+[node name="40 Le_Trombe" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+value = 40
+texture_front = ExtResource("100_1gram")
+texture_back = ExtResource("7_svd2l")
+
+[node name="Il_Matto" type="TextureRect" parent="MinchiateDeck"]
+texture = ExtResource("7_svd2l")
+expand_mode = 1
+script = ExtResource("6_54h2m")
+suit = 4
+texture_front = ExtResource("101_pdy4v")
+texture_back = ExtResource("7_svd2l")

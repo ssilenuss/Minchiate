@@ -1,38 +1,54 @@
 @tool
-extends Control
+extends Card
 class_name CardDrop
 
+@export var card_manager: CardManager
+@export var can_drop : bool = false
+
+@export_category("Style")
+@export var style_box : StyleBoxFlat = StyleBoxFlat.new()
+@export var border_width : int = 1 :
+	set(value):
+		border_width = value
+		style_box.set_border_width_all(border_width)
+		queue_redraw()
 @export var radius : int = 45 :
 	set(value):
 		radius = value
+		style_box.set_corner_radius_all(radius)
 		queue_redraw()
-@export var color : Color :
+@export var bg_color : Color :
 	set(value):
-		color = value
+		bg_color = value
+		style_box.set_bg_color(bg_color)
 		queue_redraw()
-
-@export var style_box : StyleBox :
+@export var border_color : Color :
 	set(value):
-		style_box = value
+		border_color = value
+		style_box.set_border_color(border_color)
 		queue_redraw()
 
-
-signal dragging_changed(value: bool)
 
 func _ready() -> void:
-	modulate = Color(Color.MEDIUM_PURPLE, 0.7)
-	dragging_changed.connect(_on_dragging_changed)
+	card_manager.set_card_size(self)
+	queue_redraw()
+	mouse_entered.connect(_on_mouse_entered)
+	mouse_exited.connect(_on_mouse_exited)
 
-func _process(_delta: float) -> void:
-	if Global.is_dragging:
-		visible = true
-	else:
-		visible = false
-
-func _on_dragging_changed(value: bool)->void:
-	Global.is_dragging = value
 
 func _draw() -> void:
-	var style_box = StyleBoxLine.new()
-	style_box.set_corner_radius_all(radius)
 	draw_style_box(style_box, Rect2(Vector2.ZERO, size))
+	
+func _on_mouse_entered()->void:
+
+	if card_manager.card_dragging:
+		if can_drop:
+			card_manager.card_drop = self
+			bg_color= Color(0,1,0,0.5)
+		else:
+			bg_color = Color(1,0,0,0.5)
+
+	
+func _on_mouse_exited()->void:
+	card_manager.card_drop = null
+	bg_color.a = 0.0
