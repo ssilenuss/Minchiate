@@ -50,20 +50,22 @@ func _ready() -> void:
 	set_mouse_filter(Control.MOUSE_FILTER_IGNORE)
 	
 	for c in get_children():
-		if decks[0]:
+		if decks.size()>0:
 			c.position = decks[0].position
 		set_card_size(c)
 		c.manager = self
+	
 
 func _process(_delta: float) -> void:
 	if card_hovering and Input.is_action_just_pressed("right_click"):
 		card_hovering.front = !card_hovering.front
 		
 	if card_hovering and Input.is_action_pressed("left_click"): 
-		card_dragging = card_hovering
-		card_dragging.set_mouse_filter(Control.MOUSE_FILTER_IGNORE)
-		move_child(card_dragging, get_child_count()-1)
-		card_hovering.set_hover(true)
+		if card_hovering.can_drag:
+			card_dragging = card_hovering
+			card_dragging.set_mouse_filter(Control.MOUSE_FILTER_IGNORE)
+			card_dragging.move_to_front()
+			card_hovering.set_hover(true)
 		#set_card_hovering(null)
 		
 	if card_dragging:
@@ -80,12 +82,14 @@ func _process(_delta: float) -> void:
 				#card_dragging.free_placement = true
 				pass
 			if card_dragging.deck:
-				move_card(card_dragging, card_dragging.deck.position, move_speed)
+				#move_card(card_dragging, card_dragging.deck.position, move_speed)
+				card_dragging.move(card_dragging.deck.position, move_speed)
 			card_dragging = null
 			
 		else:
 			
-			move_card(card_dragging, get_global_mouse_position()-card_dragging.pivot_offset, drag_speed)
+			#move_card(card_dragging, get_global_mouse_position()-card_dragging.pivot_offset, drag_speed)
+			card_dragging.move(get_global_mouse_position()-card_dragging.pivot_offset, drag_speed)
 		
 		
 
@@ -121,23 +125,30 @@ func set_card_hovering(_card_hovering: Card):
 		card_hovering.set_hover(true)
 	
 #
-func move_card(_card: Card, _pos: Vector2, _speed: float)->void:
-	if position_tween and position_tween.is_valid():
-			position_tween.kill()
-			position_tween = null
-	position_tween = create_tween()
-	position_tween.set_parallel(true)
-	position_tween.tween_property(_card, "position", _pos, _speed)
-	#
+#func move_card(_card: Card, _pos: Vector2, _speed: float)->void:
+	#if position_tween and position_tween.is_valid():
+			#position_tween.kill()
+			#position_tween = null
+	#position_tween = create_tween()
+	#position_tween.set_parallel(true)
+	#position_tween.tween_property(_card, "position", _pos, _speed)
+
+#gotta figure out what's going on with the deck count.  Not currently working.
 func new_deck_from(_card: Card)->void:
 	var d := Deck.new()
 	d.add_card(_card)
 	d.position = _card.position
 	decks.append(d)
+	#print(decks.size(), " decks in play")
+	print_deck_info()
 
 func set_card_drop(_card: Card)->void:
 	card_drop = _card
-	
+
+func print_deck_info()->void:
+	print("num of decks: ", decks.size())
+	for i in decks.size():
+		print("Deck ", i, " has ", decks[i].cards.size(), " cards.")
 	
 			#
 		#

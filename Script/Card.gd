@@ -2,6 +2,7 @@
 extends TextureRect
 class_name Card
 #enum Suit {FIRE, WATER, AIR, EARTH}
+@export var can_drag : bool
 @export var deck : Deck
 
 enum Suits {BATONS, CUPS, SWORDS, COINS, TRUMPS}
@@ -85,3 +86,11 @@ func set_hover(_hover: bool):
 		
 	else:
 		hover_tween.tween_property(self, "scale", prev_scale, hover_scale_speed)
+
+func move( _pos: Vector2, _speed: float)->void:
+	if position_tween and position_tween.is_valid():
+			position_tween.kill()
+			position_tween = null
+	position_tween = create_tween()
+	position_tween.set_parallel(true)
+	position_tween.tween_property(self, "position", _pos, _speed)
