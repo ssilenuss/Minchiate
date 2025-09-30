@@ -2,6 +2,7 @@ extends Control
 
 @export var card_manager : CardManager
 @export var camera : SmoothCam
+@export var noise : FastNoiseLite
 
 var cards : Array[Card] = []
 
@@ -12,6 +13,10 @@ enum states{RESTART, CUTDECK}
 var game_state : int : set = set_game_state
 	
 var position_tween: Tween 
+
+
+signal cards_ready
+
 func _ready() -> void:
 	randomize()
 	screen_size = get_viewport().get_visible_rect().size
@@ -41,8 +46,17 @@ func set_game_state(_state :int)->void:
 			place_cards_randomly_around_screen()
 		states.CUTDECK:
 			cards.shuffle()
-			create_card_line(cards, camera.left_node.global_position, camera.right_node.global_position, 0.5)
-			#stack_cards(cards, Vector2.ZERO, 0.1)
+			
+			stack_cards(cards, Vector2.ZERO, 0.05)
+			await cards_ready
+			
+			var margin := Vector2(screen_size.x/10.0, screen_size.y/10.0)
+			var end := Vector2(camera.left_node.global_position.x+margin.x, camera.bottom_node.global_position.y - margin.y*2.0)
+			var start := Vector2(camera.right_node.global_position.x-margin.x, camera.bottom_node.global_position.y - margin.y*2.0)
+			
+			
+			create_card_line(cards, start, end, 0.1)
+			
 
 func place_cards_randomly_around_screen()->void:
 	#place cards randomly around an area
@@ -60,13 +74,17 @@ func create_card_line(_cards: Array[Card], _start: Vector2, _end: Vector2, _spee
 		_cards[i].can_drag = false
 		_cards[i].set_hover(false)
 		_cards[i].move_to_front()
+		
+		var noise_scalar : float = 10.0
 		var weight :float = i / float(_cards.size())
 		var new_pos :Vector2= lerp(_start, _end, weight)
-		
+		var nudge := Vector2(noise.get_noise_2dv(new_pos), noise.get_noise_2dv(-new_pos))
+		new_pos += nudge * noise_scalar
 		_cards[i].move(new_pos-_cards[i].size/2.0, _speed)
 		await get_tree().create_timer(_speed/4.0).timeout
 	
 	card_manager.print_deck_info()
+	cards_ready.emit()
 	
 func stack_cards(_cards: Array[Card], _pos: Vector2, _speed: float)->void:
 	card_manager.new_deck_from(cards[0])
@@ -80,6 +98,7 @@ func stack_cards(_cards: Array[Card], _pos: Vector2, _speed: float)->void:
 		await get_tree().create_timer(_speed/4.0).timeout
 	
 	card_manager.print_deck_info()
+	cards_ready.emit()
 
 		
 	
@@ -89,3 +108,7 @@ func stack_cards(_cards: Array[Card], _pos: Vector2, _speed: float)->void:
 	
 	
 	
+
+
+func _on_resized() -> void:
+	screen_size = get_viewport().get_visible_rect().size

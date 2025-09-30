@@ -38,7 +38,7 @@ func _process(delta: float) -> void:
 		if zoom.x - zoom_scale.x > 0 and zoom.y - zoom_scale.y:
 			zoom -= Vector2.ONE * delta * zoom_speed	
 	position = lerp(position, target_position, lerp_speed)
-	print(left_node.global_position, " ", right_node.global_position)
+	
 
 
 func set_edge_nodes()->void:

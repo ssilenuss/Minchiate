@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=3 uid="uid://jkildyvy7ixn"]
+[gd_scene load_steps=110 format=3 uid="uid://jkildyvy7ixn"]
 
 [ext_resource type="Script" uid="uid://dqv6j2u50wl1c" path="res://Script/MinchiateController.gd" id="1_eef1t"]
 [ext_resource type="Script" uid="uid://cd5r2fdbprtul" path="res://Script/card_manager.gd" id="2_cm0pq"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://twg2jks6sww0" path="res://Script/CardDrop.gd" id="4_cm0pq"]
 [ext_resource type="Texture2D" uid="uid://5aho7kr0yl4s" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_01.jpg" id="5_a5sy2"]
 [ext_resource type="Texture2D" uid="uid://fbikjqjyrngu" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_02.jpg" id="6_ulc4m"]
+[ext_resource type="Material" uid="uid://da1f3qo6ociqs" path="res://Materials/RoundedCorners.material" id="7_cbpwj"]
 [ext_resource type="Texture2D" uid="uid://cqtgqmm0oq1n2" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_03.jpg" id="7_eef1t"]
 [ext_resource type="Texture2D" uid="uid://bhghbq4r7olw6" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_04.jpg" id="8_siwj1"]
 [ext_resource type="Texture2D" uid="uid://bosmn0gaukucb" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_05.jpg" id="9_w1ool"]
@@ -106,6 +107,8 @@
 [ext_resource type="Texture2D" uid="uid://cmyyhbxemxpma" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_Il_Matto.jpg" id="101_t31qo"]
 [ext_resource type="Script" uid="uid://t0n26p7actfj" path="res://Script/Camera.gd" id="103_siwj1"]
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_w1ool"]
+
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jw3lw"]
 blend_mode = 3
 
@@ -131,6 +134,7 @@ grow_vertical = 2
 script = ExtResource("1_eef1t")
 card_manager = NodePath("CardManager")
 camera = NodePath("Camera2D")
+noise = SubResource("FastNoiseLite_w1ool")
 metadata/_edit_lock_ = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -169,9 +173,8 @@ border_width = 5
 radius = 15
 bg_color = Color(0.23529412, 1, 0.23529412, 0)
 border_color = Color(0.6255971, 0.6255971, 0.6255971, 1)
-can_drag = null
 
-[node name="StartingDrop" type="TextureRect" parent="Drops" node_paths=PackedStringArray("card_manager", "deck")]
+[node name="StartingDrop" type="TextureRect" parent="Drops" node_paths=PackedStringArray("card_manager")]
 visible = false
 layout_mode = 0
 offset_left = 968.0
@@ -187,8 +190,6 @@ border_width = 5
 radius = 15
 bg_color = Color(0.23529412, 1, 0.23529412, 0)
 border_color = Color(0.6255971, 0.6255971, 0.6255971, 1)
-can_drag = null
-deck = NodePath("")
 value = 1
 
 [node name="CardManager" type="Control" parent="."]
@@ -201,6 +202,7 @@ texture_back = ExtResource("3_fos0i")
 metadata/_edit_lock_ = true
 
 [node name="01 of Batons" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -210,12 +212,12 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 value = 1
 texture_front = ExtResource("5_a5sy2")
 texture_back = ExtResource("3_fos0i")
 
 [node name="02 of Batons" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -225,12 +227,12 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 value = 2
 texture_front = ExtResource("6_ulc4m")
 texture_back = ExtResource("3_fos0i")
 
 [node name="03 of Batons" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -240,12 +242,12 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 value = 3
 texture_front = ExtResource("7_eef1t")
 texture_back = ExtResource("3_fos0i")
 
 [node name="04 of Batons" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -255,12 +257,12 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 value = 4
 texture_front = ExtResource("8_siwj1")
 texture_back = ExtResource("3_fos0i")
 
 [node name="05 of Batons" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -270,12 +272,12 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 value = 5
 texture_front = ExtResource("9_w1ool")
 texture_back = ExtResource("3_fos0i")
 
 [node name="06 of Batons" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -285,12 +287,12 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 value = 6
 texture_front = ExtResource("10_cbpwj")
 texture_back = ExtResource("3_fos0i")
 
 [node name="07 of Batons" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -300,12 +302,12 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 value = 7
 texture_front = ExtResource("11_jw3lw")
 texture_back = ExtResource("3_fos0i")
 
 [node name="08 of Batons" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -315,12 +317,12 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 value = 8
 texture_front = ExtResource("12_h7ft5")
 texture_back = ExtResource("3_fos0i")
 
 [node name="09 of Batons" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -330,12 +332,12 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 value = 9
 texture_front = ExtResource("13_cchgx")
 texture_back = ExtResource("3_fos0i")
 
 [node name="10 of Batons" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -345,12 +347,12 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 value = 10
 texture_front = ExtResource("14_6jw1o")
 texture_back = ExtResource("3_fos0i")
 
 [node name="11 of Batons" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -360,12 +362,12 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 value = 11
 texture_front = ExtResource("15_mhc43")
 texture_back = ExtResource("3_fos0i")
 
 [node name="12 of Batons" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -375,12 +377,12 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 value = 12
 texture_front = ExtResource("16_qpal1")
 texture_back = ExtResource("3_fos0i")
 
 [node name="13 of Batons" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -390,12 +392,12 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 value = 13
 texture_front = ExtResource("17_har0a")
 texture_back = ExtResource("3_fos0i")
 
 [node name="14 of Batons" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -405,12 +407,12 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 value = 13
 texture_front = ExtResource("18_r8bee")
 texture_back = ExtResource("3_fos0i")
 
 [node name="01 of Coins" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -420,13 +422,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 3
 value = 1
 texture_front = ExtResource("19_rwa6c")
 texture_back = ExtResource("3_fos0i")
 
 [node name="02 of Coins" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -436,13 +438,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 3
 value = 2
 texture_front = ExtResource("20_yhlxv")
 texture_back = ExtResource("3_fos0i")
 
 [node name="03 of Coins" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -452,13 +454,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 3
 value = 3
 texture_front = ExtResource("21_ry2vk")
 texture_back = ExtResource("3_fos0i")
 
 [node name="04 of Coins" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -468,13 +470,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 3
 value = 4
 texture_front = ExtResource("22_3d2lr")
 texture_back = ExtResource("3_fos0i")
 
 [node name="05 of Coins" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -484,13 +486,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 3
 value = 5
 texture_front = ExtResource("23_onym5")
 texture_back = ExtResource("3_fos0i")
 
 [node name="06 of Coins" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -500,13 +502,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 3
 value = 6
 texture_front = ExtResource("24_3pqs5")
 texture_back = ExtResource("3_fos0i")
 
 [node name="07 of Coins" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -516,13 +518,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 3
 value = 7
 texture_front = ExtResource("25_lxea5")
 texture_back = ExtResource("3_fos0i")
 
 [node name="08 of Coins" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -532,13 +534,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 3
 value = 8
 texture_front = ExtResource("26_0y6do")
 texture_back = ExtResource("3_fos0i")
 
 [node name="09 of Coins" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -548,13 +550,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 3
 value = 9
 texture_front = ExtResource("27_28d8q")
 texture_back = ExtResource("3_fos0i")
 
 [node name="10 of Coins" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -564,13 +566,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 3
 value = 10
 texture_front = ExtResource("28_ljb7l")
 texture_back = ExtResource("3_fos0i")
 
 [node name="11 of Coins" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -580,13 +582,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 3
 value = 11
 texture_front = ExtResource("29_pqonn")
 texture_back = ExtResource("3_fos0i")
 
 [node name="12 of Coins" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -596,13 +598,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 3
 value = 12
 texture_front = ExtResource("30_y7h6l")
 texture_back = ExtResource("3_fos0i")
 
 [node name="13 of Coins" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -612,13 +614,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 3
 value = 13
 texture_front = ExtResource("31_7ikoh")
 texture_back = ExtResource("3_fos0i")
 
 [node name="14 of Coins" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -628,13 +630,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 3
 value = 13
 texture_front = ExtResource("32_lt6nf")
 texture_back = ExtResource("3_fos0i")
 
 [node name="01 of Cups" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -644,13 +646,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 1
 value = 1
 texture_front = ExtResource("33_ggkpb")
 texture_back = ExtResource("3_fos0i")
 
 [node name="02 of Cups" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -660,13 +662,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 1
 value = 2
 texture_front = ExtResource("34_48o01")
 texture_back = ExtResource("3_fos0i")
 
 [node name="03 of Cups" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -676,13 +678,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 1
 value = 3
 texture_front = ExtResource("35_tnt7p")
 texture_back = ExtResource("3_fos0i")
 
 [node name="04 of Cups" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -692,13 +694,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 1
 value = 4
 texture_front = ExtResource("36_hwg2s")
 texture_back = ExtResource("3_fos0i")
 
 [node name="05 of Cups" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -708,13 +710,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 1
 value = 5
 texture_front = ExtResource("37_bposm")
 texture_back = ExtResource("3_fos0i")
 
 [node name="06 of Cups" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -724,13 +726,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 1
 value = 6
 texture_front = ExtResource("38_0j4c6")
 texture_back = ExtResource("3_fos0i")
 
 [node name="07 of Cups" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -740,13 +742,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 1
 value = 7
 texture_front = ExtResource("39_qmo2n")
 texture_back = ExtResource("3_fos0i")
 
 [node name="08 of Cups" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -756,13 +758,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 1
 value = 8
 texture_front = ExtResource("40_mjyee")
 texture_back = ExtResource("3_fos0i")
 
 [node name="09 of Cups" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -772,13 +774,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 1
 value = 9
 texture_front = ExtResource("41_fend5")
 texture_back = ExtResource("3_fos0i")
 
 [node name="10 of Cups" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -788,13 +790,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 1
 value = 10
 texture_front = ExtResource("42_qxwff")
 texture_back = ExtResource("3_fos0i")
 
 [node name="11 of Cups" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -804,13 +806,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 1
 value = 11
 texture_front = ExtResource("43_dwns0")
 texture_back = ExtResource("3_fos0i")
 
 [node name="12 of Cups" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -820,13 +822,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 1
 value = 12
 texture_front = ExtResource("44_ghvh6")
 texture_back = ExtResource("3_fos0i")
 
 [node name="13 of Cups" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -836,13 +838,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 1
 value = 13
 texture_front = ExtResource("45_ogxyq")
 texture_back = ExtResource("3_fos0i")
 
 [node name="14 of Cups" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -852,13 +854,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 1
 value = 13
 texture_front = ExtResource("46_g6gwx")
 texture_back = ExtResource("3_fos0i")
 
 [node name="01 of Swords" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -868,13 +870,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 2
 value = 1
 texture_front = ExtResource("47_ynyn3")
 texture_back = ExtResource("3_fos0i")
 
 [node name="02 of Swords" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -884,13 +886,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 2
 value = 2
 texture_front = ExtResource("48_26vri")
 texture_back = ExtResource("3_fos0i")
 
 [node name="03 of Swords" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -900,13 +902,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 2
 value = 3
 texture_front = ExtResource("49_c3wx6")
 texture_back = ExtResource("3_fos0i")
 
 [node name="04 of Swords" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -916,13 +918,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 2
 value = 4
 texture_front = ExtResource("50_h4exs")
 texture_back = ExtResource("3_fos0i")
 
 [node name="05 of Swords" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -932,13 +934,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 2
 value = 5
 texture_front = ExtResource("51_3h58w")
 texture_back = ExtResource("3_fos0i")
 
 [node name="06 of Swords" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -948,13 +950,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 2
 value = 6
 texture_front = ExtResource("52_2v47r")
 texture_back = ExtResource("3_fos0i")
 
 [node name="07 of Swords" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -964,13 +966,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 2
 value = 7
 texture_front = ExtResource("53_ipxax")
 texture_back = ExtResource("3_fos0i")
 
 [node name="08 of Swords" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -980,13 +982,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 2
 value = 8
 texture_front = ExtResource("54_ymfm7")
 texture_back = ExtResource("3_fos0i")
 
 [node name="09 of Swords" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -996,13 +998,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 2
 value = 9
 texture_front = ExtResource("55_hnm10")
 texture_back = ExtResource("3_fos0i")
 
 [node name="10 of Swords" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1012,13 +1014,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 2
 value = 10
 texture_front = ExtResource("56_k5mmj")
 texture_back = ExtResource("3_fos0i")
 
 [node name="11 of Swords" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1028,13 +1030,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 2
 value = 11
 texture_front = ExtResource("57_bgexd")
 texture_back = ExtResource("3_fos0i")
 
 [node name="12 of Swords" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1044,13 +1046,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 2
 value = 12
 texture_front = ExtResource("58_ywalu")
 texture_back = ExtResource("3_fos0i")
 
 [node name="13 of Swords" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1060,13 +1062,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 2
 value = 13
 texture_front = ExtResource("59_lx5tc")
 texture_back = ExtResource("3_fos0i")
 
 [node name="14 of Swords" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1076,13 +1078,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 2
 value = 13
 texture_front = ExtResource("60_i1hh6")
 texture_back = ExtResource("3_fos0i")
 
 [node name="01 Papa_uno" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1092,13 +1094,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 1
 texture_front = ExtResource("61_epesh")
 texture_back = ExtResource("3_fos0i")
 
 [node name="02 Papa_due" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1108,13 +1110,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 2
 texture_front = ExtResource("62_10juh")
 texture_back = ExtResource("3_fos0i")
 
 [node name="03 Papa_tre" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1124,13 +1126,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 3
 texture_front = ExtResource("63_m2ygb")
 texture_back = ExtResource("3_fos0i")
 
 [node name="04 Papa_quattro" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1140,13 +1142,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 4
 texture_front = ExtResource("64_ckwfn")
 texture_back = ExtResource("3_fos0i")
 
 [node name="05 Papa_cinque" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1156,13 +1158,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 5
 texture_front = ExtResource("65_7g2y2")
 texture_back = ExtResource("3_fos0i")
 
 [node name="06 La_Temperanza" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1172,13 +1174,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 6
 texture_front = ExtResource("66_krdob")
 texture_back = ExtResource("3_fos0i")
 
 [node name="07 La_Forza" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1188,13 +1190,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 7
 texture_front = ExtResource("67_56epy")
 texture_back = ExtResource("3_fos0i")
 
 [node name="08 La_Giustizia" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1204,13 +1206,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 8
 texture_front = ExtResource("68_rociu")
 texture_back = ExtResource("3_fos0i")
 
 [node name="09 La_Ruota_della_Fortuna" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1220,13 +1222,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 9
 texture_front = ExtResource("69_8nd6u")
 texture_back = ExtResource("3_fos0i")
 
 [node name="10 Il_Carro" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1236,13 +1238,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 10
 texture_front = ExtResource("70_1tb4x")
 texture_back = ExtResource("3_fos0i")
 
 [node name="11 Il_Gobbo" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1252,13 +1254,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 11
 texture_front = ExtResource("71_7j6ax")
 texture_back = ExtResource("3_fos0i")
 
 [node name="12 L\'Impiccato" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1268,13 +1270,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 12
 texture_front = ExtResource("72_0rgc5")
 texture_back = ExtResource("3_fos0i")
 
 [node name="13 La_Morte" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1284,13 +1286,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 13
 texture_front = ExtResource("73_22a0x")
 texture_back = ExtResource("3_fos0i")
 
 [node name="14 Il_Diavolo" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1300,13 +1302,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 14
 texture_front = ExtResource("74_f6mr6")
 texture_back = ExtResource("3_fos0i")
 
 [node name="15 La_Casa_del_Diavolo" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1316,13 +1318,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 15
 texture_front = ExtResource("75_5wvm2")
 texture_back = ExtResource("3_fos0i")
 
 [node name="16 La_Speranza" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1332,13 +1334,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 16
 texture_front = ExtResource("76_l4xhm")
 texture_back = ExtResource("3_fos0i")
 
 [node name="17 La_Prudenza" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1348,13 +1350,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 17
 texture_front = ExtResource("77_bv7qx")
 texture_back = ExtResource("3_fos0i")
 
 [node name="18 La_Fede" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1364,13 +1366,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 18
 texture_front = ExtResource("78_5g1k7")
 texture_back = ExtResource("3_fos0i")
 
 [node name="19 La_Carità" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1380,13 +1382,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 19
 texture_front = ExtResource("79_o737a")
 texture_back = ExtResource("3_fos0i")
 
 [node name="20 Il_Fuoco" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1396,13 +1398,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 20
 texture_front = ExtResource("80_8g4l6")
 texture_back = ExtResource("3_fos0i")
 
 [node name="21 L\'Acqua" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1412,13 +1414,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 21
 texture_front = ExtResource("81_j5a2b")
 texture_back = ExtResource("3_fos0i")
 
 [node name="22 La_Terra" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1428,13 +1430,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 22
 texture_front = ExtResource("82_40txs")
 texture_back = ExtResource("3_fos0i")
 
 [node name="23 L\'Aria" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1444,13 +1446,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 23
 texture_front = ExtResource("83_ajgh3")
 texture_back = ExtResource("3_fos0i")
 
 [node name="24 La_Bilancia" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1460,13 +1462,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 24
 texture_front = ExtResource("84_1681s")
 texture_back = ExtResource("3_fos0i")
 
 [node name="25 La_Vergine" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1476,13 +1478,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 25
 texture_front = ExtResource("85_8ir7a")
 texture_back = ExtResource("3_fos0i")
 
 [node name="26 Il_Scorpione" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1492,13 +1494,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 26
 texture_front = ExtResource("86_xxmk3")
 texture_back = ExtResource("3_fos0i")
 
 [node name="27 L\'Ariete" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1508,13 +1510,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 27
 texture_front = ExtResource("87_dlu6c")
 texture_back = ExtResource("3_fos0i")
 
 [node name="28 Il_Capricorno" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1524,13 +1526,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 28
 texture_front = ExtResource("88_cf1h0")
 texture_back = ExtResource("3_fos0i")
 
 [node name="29 Il_Sagittario" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1540,13 +1542,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 29
 texture_front = ExtResource("89_22l73")
 texture_back = ExtResource("3_fos0i")
 
 [node name="30 Il_Cancro" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1556,13 +1558,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 30
 texture_front = ExtResource("90_yhm6q")
 texture_back = ExtResource("3_fos0i")
 
 [node name="31 I_Pesci" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1572,13 +1574,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 31
 texture_front = ExtResource("91_tn5hs")
 texture_back = ExtResource("3_fos0i")
 
 [node name="32 L\'Acquario" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1588,13 +1590,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 32
 texture_front = ExtResource("92_wlsl0")
 texture_back = ExtResource("3_fos0i")
 
 [node name="33 Il_Leone" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1604,13 +1606,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 33
 texture_front = ExtResource("93_4trvs")
 texture_back = ExtResource("3_fos0i")
 
 [node name="34 Il_Toro" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1620,13 +1622,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 34
 texture_front = ExtResource("94_r3hun")
 texture_back = ExtResource("3_fos0i")
 
 [node name="35 I_Gemelli" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1636,29 +1638,29 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 35
 texture_front = ExtResource("95_v7kft")
 texture_back = ExtResource("3_fos0i")
 
 [node name="36 La_Stella" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
-offset_left = 968.0
-offset_top = 23.0
-offset_right = 1108.0
-offset_bottom = 263.0
+offset_left = 181.0
+offset_top = 28.0
+offset_right = 321.0
+offset_bottom = 268.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 36
 texture_front = ExtResource("96_qfdr7")
 texture_back = ExtResource("3_fos0i")
 
 [node name="37 La_Luna" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1668,13 +1670,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 37
 texture_front = ExtResource("97_4yt88")
 texture_back = ExtResource("3_fos0i")
 
 [node name="38 Il_Sole" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1684,13 +1686,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 38
 texture_front = ExtResource("98_33aut")
 texture_back = ExtResource("3_fos0i")
 
 [node name="39 Il_Mondo" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1700,13 +1702,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 39
 texture_front = ExtResource("99_w3oh2")
 texture_back = ExtResource("3_fos0i")
 
 [node name="40 Le_Trombe" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1716,13 +1718,13 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 value = 40
 texture_front = ExtResource("100_qseld")
 texture_back = ExtResource("3_fos0i")
 
 [node name="Il_Matto" type="TextureRect" parent="CardManager"]
+material = ExtResource("7_cbpwj")
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -1732,10 +1734,11 @@ pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
-can_drag = null
 suit = 4
 texture_front = ExtResource("101_t31qo")
 texture_back = ExtResource("3_fos0i")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("103_siwj1")
+
+[connection signal="resized" from="." to="." method="_on_resized"]
