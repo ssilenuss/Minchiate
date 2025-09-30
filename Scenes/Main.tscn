@@ -1,107 +1,113 @@
-[gd_scene load_steps=104 format=3 uid="uid://jkildyvy7ixn"]
+[gd_scene load_steps=108 format=3 uid="uid://jkildyvy7ixn"]
 
-[ext_resource type="Script" uid="uid://cd5r2fdbprtul" path="res://card_manager.gd" id="2_cm0pq"]
+[ext_resource type="Script" uid="uid://dqv6j2u50wl1c" path="res://Script/MinchiateController.gd" id="1_eef1t"]
+[ext_resource type="Script" uid="uid://cd5r2fdbprtul" path="res://Script/card_manager.gd" id="2_cm0pq"]
 [ext_resource type="Script" uid="uid://esdqyk4v1n07" path="res://Script/Card.gd" id="2_uu6xs"]
-[ext_resource type="Texture2D" uid="uid://bhm31yrp4tvj5" path="res://CardTextures/Minchiate_card_deck_-_Florence_-_1860-1890_-_Back.jpg" id="3_fos0i"]
-[ext_resource type="Texture2D" uid="uid://c8tprd0e8h2ds" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_Il_Matto.jpg" id="4_3dxm6"]
+[ext_resource type="Texture2D" uid="uid://duibinfiwylgw" path="res://Velvet2K/4K-velvet_basecolor.jpg" id="2_w1ool"]
+[ext_resource type="Texture2D" uid="uid://b7bye12fw7oiy" path="res://Velvet2K/4K-velvet_height.jpg" id="3_cbpwj"]
+[ext_resource type="Texture2D" uid="uid://bhm31yrp4tvj5" path="res://Textures/CardTextures/Minchiate_card_deck_-_Florence_-_1860-1890_-_Back.jpg" id="3_fos0i"]
 [ext_resource type="Script" uid="uid://twg2jks6sww0" path="res://Script/CardDrop.gd" id="4_cm0pq"]
-[ext_resource type="Texture2D" uid="uid://dusihb1eonhi1" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_01.jpg" id="5_a5sy2"]
-[ext_resource type="Material" uid="uid://da1f3qo6ociqs" path="res://Materials/RoundedCorners.material" id="5_fos0i"]
-[ext_resource type="Texture2D" uid="uid://dotonvcem6du7" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_02.jpg" id="6_ulc4m"]
-[ext_resource type="Texture2D" uid="uid://cexa3xwg5dyiq" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_03.jpg" id="7_eef1t"]
-[ext_resource type="Texture2D" uid="uid://oe23uifpbhiw" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_04.jpg" id="8_siwj1"]
-[ext_resource type="Texture2D" uid="uid://dle551vwxxq1q" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_05.jpg" id="9_w1ool"]
-[ext_resource type="Texture2D" uid="uid://deltyg3tcq7i8" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_06.jpg" id="10_cbpwj"]
-[ext_resource type="Texture2D" uid="uid://d0b4cvef6w0hy" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_07.jpg" id="11_jw3lw"]
-[ext_resource type="Texture2D" uid="uid://dnqk1y4o3d1hp" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_08.jpg" id="12_h7ft5"]
-[ext_resource type="Texture2D" uid="uid://d38r553to0r2d" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_09.jpg" id="13_cchgx"]
-[ext_resource type="Texture2D" uid="uid://gq2jbkuyotuh" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_10.jpg" id="14_6jw1o"]
-[ext_resource type="Texture2D" uid="uid://dhprtt7p6w3k1" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_11_-_Jack.jpg" id="15_mhc43"]
-[ext_resource type="Texture2D" uid="uid://goq0qymsl0x1" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_12_-_Knight.jpg" id="16_qpal1"]
-[ext_resource type="Texture2D" uid="uid://bqi2xxg1oloc" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_13_-_Queen.jpg" id="17_har0a"]
-[ext_resource type="Texture2D" uid="uid://bpj2d4aru2ovt" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_14_-_King.jpg" id="18_r8bee"]
-[ext_resource type="Texture2D" uid="uid://cki77o76rhn0m" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_01.jpg" id="19_rwa6c"]
-[ext_resource type="Texture2D" uid="uid://8xvk2eldsdnl" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_02.jpg" id="20_yhlxv"]
-[ext_resource type="Texture2D" uid="uid://dkrb1nmab72lf" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_03.jpg" id="21_ry2vk"]
-[ext_resource type="Texture2D" uid="uid://dxyp4qtnwyj7h" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_04.jpg" id="22_3d2lr"]
-[ext_resource type="Texture2D" uid="uid://1nvo6dwcqh5v" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_05.jpg" id="23_onym5"]
-[ext_resource type="Texture2D" uid="uid://os0ljl2fcr1w" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_06.jpg" id="24_3pqs5"]
-[ext_resource type="Texture2D" uid="uid://cconllwdl2ef" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_07.jpg" id="25_lxea5"]
-[ext_resource type="Texture2D" uid="uid://dljdj07walygx" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_08.jpg" id="26_0y6do"]
-[ext_resource type="Texture2D" uid="uid://bfe5bvqo4dhbs" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_09.jpg" id="27_28d8q"]
-[ext_resource type="Texture2D" uid="uid://cgrgsufw41yim" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_10.jpg" id="28_ljb7l"]
-[ext_resource type="Texture2D" uid="uid://dncec21f6w4p4" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_11_-_Jack.jpg" id="29_pqonn"]
-[ext_resource type="Texture2D" uid="uid://c0h3ws0430x3k" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_12_-_Knight.jpg" id="30_y7h6l"]
-[ext_resource type="Texture2D" uid="uid://buvont8hyau2a" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_13_-_Queen.jpg" id="31_7ikoh"]
-[ext_resource type="Texture2D" uid="uid://cmchu4c134428" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_14_-_King.jpg" id="32_lt6nf"]
-[ext_resource type="Texture2D" uid="uid://b2t2x688lwpy7" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_01.jpg" id="33_ggkpb"]
-[ext_resource type="Texture2D" uid="uid://vfo346vbvh5x" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_02.jpg" id="34_48o01"]
-[ext_resource type="Texture2D" uid="uid://dtqg35bhybc7y" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_03.jpg" id="35_tnt7p"]
-[ext_resource type="Texture2D" uid="uid://5rcq83krfgak" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_04.jpg" id="36_hwg2s"]
-[ext_resource type="Texture2D" uid="uid://bf2vwsrrugn84" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_05.jpg" id="37_bposm"]
-[ext_resource type="Texture2D" uid="uid://cahp52c0bwc6s" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_06.jpg" id="38_0j4c6"]
-[ext_resource type="Texture2D" uid="uid://b5vxnipvb2iib" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_07.jpg" id="39_qmo2n"]
-[ext_resource type="Texture2D" uid="uid://k6sex25wswf0" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_08.jpg" id="40_mjyee"]
-[ext_resource type="Texture2D" uid="uid://bwsttwnlaenar" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_09.jpg" id="41_fend5"]
-[ext_resource type="Texture2D" uid="uid://5j35f5222263" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_10.jpg" id="42_qxwff"]
-[ext_resource type="Texture2D" uid="uid://7m4fcrfan2ac" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_11_-_Jack.jpg" id="43_dwns0"]
-[ext_resource type="Texture2D" uid="uid://dbi3rw2qhlpj0" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_12_-_Knight.jpg" id="44_ghvh6"]
-[ext_resource type="Texture2D" uid="uid://ewydbau5ge8k" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_13_-_Queen.jpg" id="45_ogxyq"]
-[ext_resource type="Texture2D" uid="uid://b37tatmbfeny0" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_14_-_King.jpg" id="46_g6gwx"]
-[ext_resource type="Texture2D" uid="uid://clfp1ey6g27bp" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_01.jpg" id="47_ynyn3"]
-[ext_resource type="Texture2D" uid="uid://engcasrdbn2" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_02.jpg" id="48_26vri"]
-[ext_resource type="Texture2D" uid="uid://cael6172laien" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_03.jpg" id="49_c3wx6"]
-[ext_resource type="Texture2D" uid="uid://dfoym665cused" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_04.jpg" id="50_h4exs"]
-[ext_resource type="Texture2D" uid="uid://bil3mvegpxohy" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_05.jpg" id="51_3h58w"]
-[ext_resource type="Texture2D" uid="uid://piqktpoycafa" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_06.jpg" id="52_2v47r"]
-[ext_resource type="Texture2D" uid="uid://c7de67al8ir2x" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_07.jpg" id="53_ipxax"]
-[ext_resource type="Texture2D" uid="uid://darptboybxebn" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_08.jpg" id="54_ymfm7"]
-[ext_resource type="Texture2D" uid="uid://0g0nefhrneuj" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_09.jpg" id="55_hnm10"]
-[ext_resource type="Texture2D" uid="uid://d00q5bnfup7h2" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_10.jpg" id="56_k5mmj"]
-[ext_resource type="Texture2D" uid="uid://bpit6evin7b3q" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_11_-_Jack.jpg" id="57_bgexd"]
-[ext_resource type="Texture2D" uid="uid://ftmmh7ssa13l" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_12_-_Knight.jpg" id="58_ywalu"]
-[ext_resource type="Texture2D" uid="uid://cm86fld0a6nsg" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_13_-_Queen.jpg" id="59_lx5tc"]
-[ext_resource type="Texture2D" uid="uid://bxxfnsrlxcjp8" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_14_-_King.jpg" id="60_i1hh6"]
-[ext_resource type="Texture2D" uid="uid://cdno3kx7hu10u" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_01_-_Papa_uno.jpg" id="61_epesh"]
-[ext_resource type="Texture2D" uid="uid://cmdmgpq5keu7r" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_02_-_Papa_due.jpg" id="62_10juh"]
-[ext_resource type="Texture2D" uid="uid://dtem41jpnj6i4" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_03_-_Papa_tre.jpg" id="63_m2ygb"]
-[ext_resource type="Texture2D" uid="uid://dxo14xg4473oy" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_04_-_Papa_quattro.jpg" id="64_ckwfn"]
-[ext_resource type="Texture2D" uid="uid://p8o340onqlio" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_05_-_Papa_cinque.jpg" id="65_7g2y2"]
-[ext_resource type="Texture2D" uid="uid://dki4ci6kivl48" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_06_-_La_Temperanza.jpg" id="66_krdob"]
-[ext_resource type="Texture2D" uid="uid://dxhhsactdrelp" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_07_-_La_Forza.jpg" id="67_56epy"]
-[ext_resource type="Texture2D" uid="uid://bib23raedvfhu" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_08_-_La_Giustizia.jpg" id="68_rociu"]
-[ext_resource type="Texture2D" uid="uid://d0suumpeoaw8e" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_09_-_La_Ruota_della_Fortuna.jpg" id="69_8nd6u"]
-[ext_resource type="Texture2D" uid="uid://7kenclcpu10e" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_10_-_Il_Carro.jpg" id="70_1tb4x"]
-[ext_resource type="Texture2D" uid="uid://cuouvvpxn6ll5" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_11_-_Il_Gobbo.jpg" id="71_7j6ax"]
-[ext_resource type="Texture2D" uid="uid://ct2d3ieijxr6o" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_12_-_L'Impiccato.jpg" id="72_0rgc5"]
-[ext_resource type="Texture2D" uid="uid://dlbe1qbnoea3u" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_13_-_La_Morte.jpg" id="73_22a0x"]
-[ext_resource type="Texture2D" uid="uid://dkxbr0cmkbhoo" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_14_-_Il_Diavolo.jpg" id="74_f6mr6"]
-[ext_resource type="Texture2D" uid="uid://coj3jwk1bvk50" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_15_-_La_Casa_del_Diavolo.jpg" id="75_5wvm2"]
-[ext_resource type="Texture2D" uid="uid://de1wclby062ft" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_16_-_La_Speranza.jpg" id="76_l4xhm"]
-[ext_resource type="Texture2D" uid="uid://b758f7xtp05xm" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_17_-_La_Prudenza.jpg" id="77_bv7qx"]
-[ext_resource type="Texture2D" uid="uid://dse8b6uv4lhmn" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_18_-_La_Fede.jpg" id="78_5g1k7"]
-[ext_resource type="Texture2D" uid="uid://dpd2lcspbdfo6" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_19_-_La_Carità.jpg" id="79_o737a"]
-[ext_resource type="Texture2D" uid="uid://blbj275gjhs70" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_20_-_Il_Fuoco.jpg" id="80_8g4l6"]
-[ext_resource type="Texture2D" uid="uid://irjr1bkdcm54" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_21_-_L'Acqua.jpg" id="81_j5a2b"]
-[ext_resource type="Texture2D" uid="uid://c6gq3emikf4ap" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_22_-_La_Terra.jpg" id="82_40txs"]
-[ext_resource type="Texture2D" uid="uid://brd1b5edl1gls" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_23_-_L'Aria.jpg" id="83_ajgh3"]
-[ext_resource type="Texture2D" uid="uid://c7moyctmyjvqr" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_24_-_La_Bilancia.jpg" id="84_1681s"]
-[ext_resource type="Texture2D" uid="uid://b1ivav8ak0gg2" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_25_-_La_Vergine.jpg" id="85_8ir7a"]
-[ext_resource type="Texture2D" uid="uid://2xh6j5v28sog" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_26_-_Il_Scorpione.jpg" id="86_xxmk3"]
-[ext_resource type="Texture2D" uid="uid://but6gv5ch5p1o" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_27_-_L'Ariete.jpg" id="87_dlu6c"]
-[ext_resource type="Texture2D" uid="uid://5varho4mdvlp" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_28_-_Il_Capricorno.jpg" id="88_cf1h0"]
-[ext_resource type="Texture2D" uid="uid://do2buf6bvepay" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_29_-_Il_Sagittario.jpg" id="89_22l73"]
-[ext_resource type="Texture2D" uid="uid://x0la70v866ct" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_30_-_Il_Cancro.jpg" id="90_yhm6q"]
-[ext_resource type="Texture2D" uid="uid://dyhrcsj5rap5e" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_31_-_I_Pesci.jpg" id="91_tn5hs"]
-[ext_resource type="Texture2D" uid="uid://gyuijkyrqxlr" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_32_-_L'Acquario.jpg" id="92_wlsl0"]
-[ext_resource type="Texture2D" uid="uid://bg45225k3luu5" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_33_-_Il_Leone.jpg" id="93_4trvs"]
-[ext_resource type="Texture2D" uid="uid://b3dupudcje03h" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_34_-_Il_Toro.jpg" id="94_r3hun"]
-[ext_resource type="Texture2D" uid="uid://c81r8tdrnl1xe" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_35_-_I_Gemelli.jpg" id="95_v7kft"]
-[ext_resource type="Texture2D" uid="uid://dx01w0an353dj" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_36_-_La_Stella.jpg" id="96_qfdr7"]
-[ext_resource type="Texture2D" uid="uid://cfl6fep4m8ug1" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_37_-_La_Luna.jpg" id="97_4yt88"]
-[ext_resource type="Texture2D" uid="uid://dj2hip5kx3p2e" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_38_-_Il_Sole.jpg" id="98_33aut"]
-[ext_resource type="Texture2D" uid="uid://c0m6asof5l4e7" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_39_-_Il_Mondo.jpg" id="99_w3oh2"]
-[ext_resource type="Texture2D" uid="uid://xg46nxib3t03" path="res://CardTextures/FlorenceFront/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_40_-_Le_Trombe.jpg" id="100_qseld"]
+[ext_resource type="Texture2D" uid="uid://5aho7kr0yl4s" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_01.jpg" id="5_a5sy2"]
+[ext_resource type="Texture2D" uid="uid://fbikjqjyrngu" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_02.jpg" id="6_ulc4m"]
+[ext_resource type="Texture2D" uid="uid://cqtgqmm0oq1n2" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_03.jpg" id="7_eef1t"]
+[ext_resource type="Texture2D" uid="uid://bhghbq4r7olw6" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_04.jpg" id="8_siwj1"]
+[ext_resource type="Texture2D" uid="uid://bosmn0gaukucb" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_05.jpg" id="9_w1ool"]
+[ext_resource type="Texture2D" uid="uid://gxa8vhptgbmk" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_06.jpg" id="10_cbpwj"]
+[ext_resource type="Texture2D" uid="uid://m0wh7qhxjdw3" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_07.jpg" id="11_jw3lw"]
+[ext_resource type="Texture2D" uid="uid://cfitwscm1juob" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_08.jpg" id="12_h7ft5"]
+[ext_resource type="Texture2D" uid="uid://qyuopygxqpfw" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_09.jpg" id="13_cchgx"]
+[ext_resource type="Texture2D" uid="uid://lwb2qpmtdqhs" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_10.jpg" id="14_6jw1o"]
+[ext_resource type="Texture2D" uid="uid://8pvxf1ga20rm" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_11_-_Jack.jpg" id="15_mhc43"]
+[ext_resource type="Texture2D" uid="uid://cq5il54eahki2" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_12_-_Knight.jpg" id="16_qpal1"]
+[ext_resource type="Texture2D" uid="uid://ckor72lgd0oxn" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_13_-_Queen.jpg" id="17_har0a"]
+[ext_resource type="Texture2D" uid="uid://b1i7af7gl0lil" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Batons_-_14_-_King.jpg" id="18_r8bee"]
+[ext_resource type="Texture2D" uid="uid://n45ve8ywuucq" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_01.jpg" id="19_rwa6c"]
+[ext_resource type="Texture2D" uid="uid://2tmqbn88hta7" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_02.jpg" id="20_yhlxv"]
+[ext_resource type="Texture2D" uid="uid://86aep01ikq7w" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_03.jpg" id="21_ry2vk"]
+[ext_resource type="Texture2D" uid="uid://crm5n7ou6o4yx" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_04.jpg" id="22_3d2lr"]
+[ext_resource type="Texture2D" uid="uid://xag8yvxf5i3m" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_05.jpg" id="23_onym5"]
+[ext_resource type="Texture2D" uid="uid://sb25ubrh7nfp" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_06.jpg" id="24_3pqs5"]
+[ext_resource type="Texture2D" uid="uid://cnawfb8r1jhmw" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_07.jpg" id="25_lxea5"]
+[ext_resource type="Texture2D" uid="uid://d3f4cu35wjx7e" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_08.jpg" id="26_0y6do"]
+[ext_resource type="Texture2D" uid="uid://bb7o71nnanyxu" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_09.jpg" id="27_28d8q"]
+[ext_resource type="Texture2D" uid="uid://5l1tqf583tf0" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_10.jpg" id="28_ljb7l"]
+[ext_resource type="Texture2D" uid="uid://dvxxrird2111p" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_11_-_Jack.jpg" id="29_pqonn"]
+[ext_resource type="Texture2D" uid="uid://duxvuc2llqu8" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_12_-_Knight.jpg" id="30_y7h6l"]
+[ext_resource type="Texture2D" uid="uid://dwjmtv26dwejt" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_13_-_Queen.jpg" id="31_7ikoh"]
+[ext_resource type="Texture2D" uid="uid://cgdxyaovae1kr" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Coins_-_14_-_King.jpg" id="32_lt6nf"]
+[ext_resource type="Texture2D" uid="uid://b86g33o3v8ps2" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_01.jpg" id="33_ggkpb"]
+[ext_resource type="Texture2D" uid="uid://cojbm5oadov6" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_02.jpg" id="34_48o01"]
+[ext_resource type="Texture2D" uid="uid://doe667lkfupdc" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_03.jpg" id="35_tnt7p"]
+[ext_resource type="Texture2D" uid="uid://gv7bjl1qeww5" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_04.jpg" id="36_hwg2s"]
+[ext_resource type="Texture2D" uid="uid://cgsdrblxqb0uw" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_05.jpg" id="37_bposm"]
+[ext_resource type="Texture2D" uid="uid://d3oxqi3rj7c7d" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_06.jpg" id="38_0j4c6"]
+[ext_resource type="Texture2D" uid="uid://dkv507i7iqmwc" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_07.jpg" id="39_qmo2n"]
+[ext_resource type="Texture2D" uid="uid://cy8hkgoqkfn0b" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_08.jpg" id="40_mjyee"]
+[ext_resource type="Texture2D" uid="uid://bm14kwmhrqjl7" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_09.jpg" id="41_fend5"]
+[ext_resource type="Texture2D" uid="uid://cen0ypgk3dyn5" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_10.jpg" id="42_qxwff"]
+[ext_resource type="Texture2D" uid="uid://cyshjets4qtwt" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_11_-_Jack.jpg" id="43_dwns0"]
+[ext_resource type="Texture2D" uid="uid://syp37c7rc660" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_12_-_Knight.jpg" id="44_ghvh6"]
+[ext_resource type="Texture2D" uid="uid://bln5wjb12mhnb" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_13_-_Queen.jpg" id="45_ogxyq"]
+[ext_resource type="Texture2D" uid="uid://4baq1y13j3ry" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Cups_-_14_-_King.jpg" id="46_g6gwx"]
+[ext_resource type="Texture2D" uid="uid://p70cklmqc3a7" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_01.jpg" id="47_ynyn3"]
+[ext_resource type="Texture2D" uid="uid://baynh11qd6fr2" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_02.jpg" id="48_26vri"]
+[ext_resource type="Texture2D" uid="uid://crj03o10mhpku" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_03.jpg" id="49_c3wx6"]
+[ext_resource type="Texture2D" uid="uid://c48u5rpaqtw5k" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_04.jpg" id="50_h4exs"]
+[ext_resource type="Texture2D" uid="uid://dy7kay8ub1o65" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_05.jpg" id="51_3h58w"]
+[ext_resource type="Texture2D" uid="uid://b5nn1nre3w62c" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_06.jpg" id="52_2v47r"]
+[ext_resource type="Texture2D" uid="uid://bf7us7rdcp227" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_07.jpg" id="53_ipxax"]
+[ext_resource type="Texture2D" uid="uid://1uq4m2qmituc" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_08.jpg" id="54_ymfm7"]
+[ext_resource type="Texture2D" uid="uid://1asp27f3v0pd" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_09.jpg" id="55_hnm10"]
+[ext_resource type="Texture2D" uid="uid://baolwwsh58sf5" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_10.jpg" id="56_k5mmj"]
+[ext_resource type="Texture2D" uid="uid://bvypw2vppgqoj" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_11_-_Jack.jpg" id="57_bgexd"]
+[ext_resource type="Texture2D" uid="uid://1v6lkk5gvom3" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_12_-_Knight.jpg" id="58_ywalu"]
+[ext_resource type="Texture2D" uid="uid://iytbvjul6s8r" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_13_-_Queen.jpg" id="59_lx5tc"]
+[ext_resource type="Texture2D" uid="uid://7eqg5imw4cmg" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Swords_-_14_-_King.jpg" id="60_i1hh6"]
+[ext_resource type="Texture2D" uid="uid://2w6axi2ltxy" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_01_-_Papa_uno.jpg" id="61_epesh"]
+[ext_resource type="Texture2D" uid="uid://besu4m240613k" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_02_-_Papa_due.jpg" id="62_10juh"]
+[ext_resource type="Texture2D" uid="uid://dvh48kq6n3sts" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_03_-_Papa_tre.jpg" id="63_m2ygb"]
+[ext_resource type="Texture2D" uid="uid://clgwihs2mnfi4" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_04_-_Papa_quattro.jpg" id="64_ckwfn"]
+[ext_resource type="Texture2D" uid="uid://cylq0s7j3cnfg" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_05_-_Papa_cinque.jpg" id="65_7g2y2"]
+[ext_resource type="Texture2D" uid="uid://cvxvk2g7n320" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_06_-_La_Temperanza.jpg" id="66_krdob"]
+[ext_resource type="Texture2D" uid="uid://drsk1fidgdki1" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_07_-_La_Forza.jpg" id="67_56epy"]
+[ext_resource type="Texture2D" uid="uid://d3wg6epu4f0uk" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_08_-_La_Giustizia.jpg" id="68_rociu"]
+[ext_resource type="Texture2D" uid="uid://c1aetot5hic3l" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_09_-_La_Ruota_della_Fortuna.jpg" id="69_8nd6u"]
+[ext_resource type="Texture2D" uid="uid://dgeff6pg0gt5v" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_10_-_Il_Carro.jpg" id="70_1tb4x"]
+[ext_resource type="Texture2D" uid="uid://cmajwpjy0w8jf" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_11_-_Il_Gobbo.jpg" id="71_7j6ax"]
+[ext_resource type="Texture2D" uid="uid://c3ad821dt6b0g" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_12_-_L'Impiccato.jpg" id="72_0rgc5"]
+[ext_resource type="Texture2D" uid="uid://c8cg3f3tnts3q" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_13_-_La_Morte.jpg" id="73_22a0x"]
+[ext_resource type="Texture2D" uid="uid://banrarmfwtuvy" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_14_-_Il_Diavolo.jpg" id="74_f6mr6"]
+[ext_resource type="Texture2D" uid="uid://bjfwgvy4q8nxi" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_15_-_La_Casa_del_Diavolo.jpg" id="75_5wvm2"]
+[ext_resource type="Texture2D" uid="uid://cd6rcbevi15n2" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_16_-_La_Speranza.jpg" id="76_l4xhm"]
+[ext_resource type="Texture2D" uid="uid://cklxktkfwl3dm" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_17_-_La_Prudenza.jpg" id="77_bv7qx"]
+[ext_resource type="Texture2D" uid="uid://bj2o60ulv7gc4" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_18_-_La_Fede.jpg" id="78_5g1k7"]
+[ext_resource type="Texture2D" uid="uid://mt8leohamqn4" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_19_-_La_Carità.jpg" id="79_o737a"]
+[ext_resource type="Texture2D" uid="uid://cpjs3x1tgrb2o" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_20_-_Il_Fuoco.jpg" id="80_8g4l6"]
+[ext_resource type="Texture2D" uid="uid://bnabq8ckx3mqb" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_21_-_L'Acqua.jpg" id="81_j5a2b"]
+[ext_resource type="Texture2D" uid="uid://hc4rupxrnftf" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_22_-_La_Terra.jpg" id="82_40txs"]
+[ext_resource type="Texture2D" uid="uid://bbxfhi3mq6b30" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_23_-_L'Aria.jpg" id="83_ajgh3"]
+[ext_resource type="Texture2D" uid="uid://bekh2titx0iv7" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_24_-_La_Bilancia.jpg" id="84_1681s"]
+[ext_resource type="Texture2D" uid="uid://dlg7ng20jr427" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_25_-_La_Vergine.jpg" id="85_8ir7a"]
+[ext_resource type="Texture2D" uid="uid://bx7qrcys5t4nv" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_26_-_Il_Scorpione.jpg" id="86_xxmk3"]
+[ext_resource type="Texture2D" uid="uid://dymk0u5uwaunf" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_27_-_L'Ariete.jpg" id="87_dlu6c"]
+[ext_resource type="Texture2D" uid="uid://b2x01oa4viyc8" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_28_-_Il_Capricorno.jpg" id="88_cf1h0"]
+[ext_resource type="Texture2D" uid="uid://dglynild27jit" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_29_-_Il_Sagittario.jpg" id="89_22l73"]
+[ext_resource type="Texture2D" uid="uid://b4j74a3i056gs" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_30_-_Il_Cancro.jpg" id="90_yhm6q"]
+[ext_resource type="Texture2D" uid="uid://dliah1nwfjw63" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_31_-_I_Pesci.jpg" id="91_tn5hs"]
+[ext_resource type="Texture2D" uid="uid://bphlvrf5av5r5" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_32_-_L'Acquario.jpg" id="92_wlsl0"]
+[ext_resource type="Texture2D" uid="uid://c1ytq5ilhths4" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_33_-_Il_Leone.jpg" id="93_4trvs"]
+[ext_resource type="Texture2D" uid="uid://bbu1tkwvkobgr" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_34_-_Il_Toro.jpg" id="94_r3hun"]
+[ext_resource type="Texture2D" uid="uid://dtpqj12jw42le" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_35_-_I_Gemelli.jpg" id="95_v7kft"]
+[ext_resource type="Texture2D" uid="uid://prigt4mwqk8n" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_36_-_La_Stella.jpg" id="96_qfdr7"]
+[ext_resource type="Texture2D" uid="uid://bhcp0wyrnpupf" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_37_-_La_Luna.jpg" id="97_4yt88"]
+[ext_resource type="Texture2D" uid="uid://c4h4fxqfph6q6" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_38_-_Il_Sole.jpg" id="98_33aut"]
+[ext_resource type="Texture2D" uid="uid://dbrtoxtjqymv" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_39_-_Il_Mondo.jpg" id="99_w3oh2"]
+[ext_resource type="Texture2D" uid="uid://ccj3ybdxdg4bl" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_40_-_Le_Trombe.jpg" id="100_qseld"]
+[ext_resource type="Texture2D" uid="uid://cmyyhbxemxpma" path="res://Textures/CardTextures/MinchiateFrontsSmall/Minchiate_card_deck_-_Florence_-_1860-1890_-_Trumps_-_Il_Matto.jpg" id="101_t31qo"]
+[ext_resource type="Script" uid="uid://t0n26p7actfj" path="res://Script/Camera.gd" id="103_siwj1"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jw3lw"]
+blend_mode = 3
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cm0pq"]
 bg_color = Color(0.23529412, 1, 0.23529412, 0)
@@ -122,7 +128,36 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_eef1t")
 metadata/_edit_lock_ = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(512, 512)
+
+[node name="Color" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_w1ool")
+centered = false
+
+[node name="height" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+material = SubResource("CanvasItemMaterial_jw3lw")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_cbpwj")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2048, 2048)
+
+[node name="Color" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+texture = ExtResource("2_w1ool")
+centered = false
+
+[node name="height" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+material = SubResource("CanvasItemMaterial_jw3lw")
+texture = ExtResource("3_cbpwj")
+centered = false
 
 [node name="Drops" type="Control" parent="."]
 anchors_preset = 0
@@ -145,7 +180,7 @@ radius = 15
 bg_color = Color(0.23529412, 1, 0.23529412, 0)
 border_color = Color(0.6255971, 0.6255971, 0.6255971, 1)
 
-[node name="StartingDrop" type="TextureRect" parent="Drops" node_paths=PackedStringArray("card_manager")]
+[node name="StartingDrop" type="TextureRect" parent="Drops" node_paths=PackedStringArray("card_manager", "deck")]
 layout_mode = 0
 offset_left = 968.0
 offset_top = 23.0
@@ -160,9 +195,10 @@ border_width = 5
 radius = 15
 bg_color = Color(0.23529412, 1, 0.23529412, 0)
 border_color = Color(0.6255971, 0.6255971, 0.6255971, 1)
+deck = NodePath("")
 value = 1
 
-[node name="CardManager" type="Control" parent="." node_paths=PackedStringArray("starting_drop")]
+[node name="CardManager" type="Control" parent="." node_paths=PackedStringArray("starting_drop", "decks")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -172,17 +208,17 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("2_cm0pq")
 starting_drop = NodePath("../Drops/StartingDrop")
+decks = [null, null, NodePath("")]
 card_width = 140.0
 texture_back = ExtResource("3_fos0i")
 metadata/_edit_lock_ = true
 
 [node name="01 of Batons" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 303.0
-offset_top = 86.0
-offset_right = 443.0
-offset_bottom = 326.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -192,12 +228,11 @@ texture_front = ExtResource("5_a5sy2")
 texture_back = ExtResource("3_fos0i")
 
 [node name="02 of Batons" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -207,12 +242,11 @@ texture_front = ExtResource("6_ulc4m")
 texture_back = ExtResource("3_fos0i")
 
 [node name="03 of Batons" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -222,12 +256,11 @@ texture_front = ExtResource("7_eef1t")
 texture_back = ExtResource("3_fos0i")
 
 [node name="04 of Batons" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -237,12 +270,11 @@ texture_front = ExtResource("8_siwj1")
 texture_back = ExtResource("3_fos0i")
 
 [node name="05 of Batons" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -252,12 +284,11 @@ texture_front = ExtResource("9_w1ool")
 texture_back = ExtResource("3_fos0i")
 
 [node name="06 of Batons" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -267,12 +298,11 @@ texture_front = ExtResource("10_cbpwj")
 texture_back = ExtResource("3_fos0i")
 
 [node name="07 of Batons" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -282,12 +312,11 @@ texture_front = ExtResource("11_jw3lw")
 texture_back = ExtResource("3_fos0i")
 
 [node name="08 of Batons" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -297,12 +326,11 @@ texture_front = ExtResource("12_h7ft5")
 texture_back = ExtResource("3_fos0i")
 
 [node name="09 of Batons" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -312,12 +340,11 @@ texture_front = ExtResource("13_cchgx")
 texture_back = ExtResource("3_fos0i")
 
 [node name="10 of Batons" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -327,12 +354,11 @@ texture_front = ExtResource("14_6jw1o")
 texture_back = ExtResource("3_fos0i")
 
 [node name="11 of Batons" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -342,12 +368,11 @@ texture_front = ExtResource("15_mhc43")
 texture_back = ExtResource("3_fos0i")
 
 [node name="12 of Batons" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -357,12 +382,11 @@ texture_front = ExtResource("16_qpal1")
 texture_back = ExtResource("3_fos0i")
 
 [node name="13 of Batons" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -372,12 +396,11 @@ texture_front = ExtResource("17_har0a")
 texture_back = ExtResource("3_fos0i")
 
 [node name="14 of Batons" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -387,12 +410,11 @@ texture_front = ExtResource("18_r8bee")
 texture_back = ExtResource("3_fos0i")
 
 [node name="01 of Coins" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -403,12 +425,11 @@ texture_front = ExtResource("19_rwa6c")
 texture_back = ExtResource("3_fos0i")
 
 [node name="02 of Coins" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -419,12 +440,11 @@ texture_front = ExtResource("20_yhlxv")
 texture_back = ExtResource("3_fos0i")
 
 [node name="03 of Coins" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -435,12 +455,11 @@ texture_front = ExtResource("21_ry2vk")
 texture_back = ExtResource("3_fos0i")
 
 [node name="04 of Coins" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -451,12 +470,11 @@ texture_front = ExtResource("22_3d2lr")
 texture_back = ExtResource("3_fos0i")
 
 [node name="05 of Coins" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -467,12 +485,11 @@ texture_front = ExtResource("23_onym5")
 texture_back = ExtResource("3_fos0i")
 
 [node name="06 of Coins" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -483,12 +500,11 @@ texture_front = ExtResource("24_3pqs5")
 texture_back = ExtResource("3_fos0i")
 
 [node name="07 of Coins" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -499,12 +515,11 @@ texture_front = ExtResource("25_lxea5")
 texture_back = ExtResource("3_fos0i")
 
 [node name="08 of Coins" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -515,12 +530,11 @@ texture_front = ExtResource("26_0y6do")
 texture_back = ExtResource("3_fos0i")
 
 [node name="09 of Coins" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -531,12 +545,11 @@ texture_front = ExtResource("27_28d8q")
 texture_back = ExtResource("3_fos0i")
 
 [node name="10 of Coins" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -547,12 +560,11 @@ texture_front = ExtResource("28_ljb7l")
 texture_back = ExtResource("3_fos0i")
 
 [node name="11 of Coins" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -563,12 +575,11 @@ texture_front = ExtResource("29_pqonn")
 texture_back = ExtResource("3_fos0i")
 
 [node name="12 of Coins" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -579,12 +590,11 @@ texture_front = ExtResource("30_y7h6l")
 texture_back = ExtResource("3_fos0i")
 
 [node name="13 of Coins" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -595,12 +605,11 @@ texture_front = ExtResource("31_7ikoh")
 texture_back = ExtResource("3_fos0i")
 
 [node name="14 of Coins" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -611,12 +620,11 @@ texture_front = ExtResource("32_lt6nf")
 texture_back = ExtResource("3_fos0i")
 
 [node name="01 of Cups" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -627,12 +635,11 @@ texture_front = ExtResource("33_ggkpb")
 texture_back = ExtResource("3_fos0i")
 
 [node name="02 of Cups" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -643,12 +650,11 @@ texture_front = ExtResource("34_48o01")
 texture_back = ExtResource("3_fos0i")
 
 [node name="03 of Cups" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -659,12 +665,11 @@ texture_front = ExtResource("35_tnt7p")
 texture_back = ExtResource("3_fos0i")
 
 [node name="04 of Cups" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -675,12 +680,11 @@ texture_front = ExtResource("36_hwg2s")
 texture_back = ExtResource("3_fos0i")
 
 [node name="05 of Cups" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -691,12 +695,11 @@ texture_front = ExtResource("37_bposm")
 texture_back = ExtResource("3_fos0i")
 
 [node name="06 of Cups" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -707,12 +710,11 @@ texture_front = ExtResource("38_0j4c6")
 texture_back = ExtResource("3_fos0i")
 
 [node name="07 of Cups" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -723,12 +725,11 @@ texture_front = ExtResource("39_qmo2n")
 texture_back = ExtResource("3_fos0i")
 
 [node name="08 of Cups" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -739,12 +740,11 @@ texture_front = ExtResource("40_mjyee")
 texture_back = ExtResource("3_fos0i")
 
 [node name="09 of Cups" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -755,12 +755,11 @@ texture_front = ExtResource("41_fend5")
 texture_back = ExtResource("3_fos0i")
 
 [node name="10 of Cups" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -771,12 +770,11 @@ texture_front = ExtResource("42_qxwff")
 texture_back = ExtResource("3_fos0i")
 
 [node name="11 of Cups" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -787,12 +785,11 @@ texture_front = ExtResource("43_dwns0")
 texture_back = ExtResource("3_fos0i")
 
 [node name="12 of Cups" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -803,12 +800,11 @@ texture_front = ExtResource("44_ghvh6")
 texture_back = ExtResource("3_fos0i")
 
 [node name="13 of Cups" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -819,12 +815,11 @@ texture_front = ExtResource("45_ogxyq")
 texture_back = ExtResource("3_fos0i")
 
 [node name="14 of Cups" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -835,12 +830,11 @@ texture_front = ExtResource("46_g6gwx")
 texture_back = ExtResource("3_fos0i")
 
 [node name="01 of Swords" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -851,12 +845,11 @@ texture_front = ExtResource("47_ynyn3")
 texture_back = ExtResource("3_fos0i")
 
 [node name="02 of Swords" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -867,12 +860,11 @@ texture_front = ExtResource("48_26vri")
 texture_back = ExtResource("3_fos0i")
 
 [node name="03 of Swords" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -883,12 +875,11 @@ texture_front = ExtResource("49_c3wx6")
 texture_back = ExtResource("3_fos0i")
 
 [node name="04 of Swords" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -899,12 +890,11 @@ texture_front = ExtResource("50_h4exs")
 texture_back = ExtResource("3_fos0i")
 
 [node name="05 of Swords" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -915,12 +905,11 @@ texture_front = ExtResource("51_3h58w")
 texture_back = ExtResource("3_fos0i")
 
 [node name="06 of Swords" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -931,12 +920,11 @@ texture_front = ExtResource("52_2v47r")
 texture_back = ExtResource("3_fos0i")
 
 [node name="07 of Swords" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -947,12 +935,11 @@ texture_front = ExtResource("53_ipxax")
 texture_back = ExtResource("3_fos0i")
 
 [node name="08 of Swords" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -963,12 +950,11 @@ texture_front = ExtResource("54_ymfm7")
 texture_back = ExtResource("3_fos0i")
 
 [node name="09 of Swords" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -979,12 +965,11 @@ texture_front = ExtResource("55_hnm10")
 texture_back = ExtResource("3_fos0i")
 
 [node name="10 of Swords" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -995,12 +980,11 @@ texture_front = ExtResource("56_k5mmj")
 texture_back = ExtResource("3_fos0i")
 
 [node name="11 of Swords" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1011,12 +995,11 @@ texture_front = ExtResource("57_bgexd")
 texture_back = ExtResource("3_fos0i")
 
 [node name="12 of Swords" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1027,12 +1010,11 @@ texture_front = ExtResource("58_ywalu")
 texture_back = ExtResource("3_fos0i")
 
 [node name="13 of Swords" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1043,12 +1025,11 @@ texture_front = ExtResource("59_lx5tc")
 texture_back = ExtResource("3_fos0i")
 
 [node name="14 of Swords" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1059,12 +1040,11 @@ texture_front = ExtResource("60_i1hh6")
 texture_back = ExtResource("3_fos0i")
 
 [node name="01 Papa_uno" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1075,12 +1055,11 @@ texture_front = ExtResource("61_epesh")
 texture_back = ExtResource("3_fos0i")
 
 [node name="02 Papa_due" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1091,12 +1070,11 @@ texture_front = ExtResource("62_10juh")
 texture_back = ExtResource("3_fos0i")
 
 [node name="03 Papa_tre" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1107,12 +1085,11 @@ texture_front = ExtResource("63_m2ygb")
 texture_back = ExtResource("3_fos0i")
 
 [node name="04 Papa_quattro" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1123,12 +1100,11 @@ texture_front = ExtResource("64_ckwfn")
 texture_back = ExtResource("3_fos0i")
 
 [node name="05 Papa_cinque" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1139,12 +1115,11 @@ texture_front = ExtResource("65_7g2y2")
 texture_back = ExtResource("3_fos0i")
 
 [node name="06 La_Temperanza" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1155,12 +1130,11 @@ texture_front = ExtResource("66_krdob")
 texture_back = ExtResource("3_fos0i")
 
 [node name="07 La_Forza" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1171,12 +1145,11 @@ texture_front = ExtResource("67_56epy")
 texture_back = ExtResource("3_fos0i")
 
 [node name="08 La_Giustizia" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1187,12 +1160,11 @@ texture_front = ExtResource("68_rociu")
 texture_back = ExtResource("3_fos0i")
 
 [node name="09 La_Ruota_della_Fortuna" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1203,12 +1175,11 @@ texture_front = ExtResource("69_8nd6u")
 texture_back = ExtResource("3_fos0i")
 
 [node name="10 Il_Carro" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1219,12 +1190,11 @@ texture_front = ExtResource("70_1tb4x")
 texture_back = ExtResource("3_fos0i")
 
 [node name="11 Il_Gobbo" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1235,12 +1205,11 @@ texture_front = ExtResource("71_7j6ax")
 texture_back = ExtResource("3_fos0i")
 
 [node name="12 L\'Impiccato" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1251,12 +1220,11 @@ texture_front = ExtResource("72_0rgc5")
 texture_back = ExtResource("3_fos0i")
 
 [node name="13 La_Morte" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1267,12 +1235,11 @@ texture_front = ExtResource("73_22a0x")
 texture_back = ExtResource("3_fos0i")
 
 [node name="14 Il_Diavolo" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1283,12 +1250,11 @@ texture_front = ExtResource("74_f6mr6")
 texture_back = ExtResource("3_fos0i")
 
 [node name="15 La_Casa_del_Diavolo" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1299,12 +1265,11 @@ texture_front = ExtResource("75_5wvm2")
 texture_back = ExtResource("3_fos0i")
 
 [node name="16 La_Speranza" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1315,12 +1280,11 @@ texture_front = ExtResource("76_l4xhm")
 texture_back = ExtResource("3_fos0i")
 
 [node name="17 La_Prudenza" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1331,12 +1295,11 @@ texture_front = ExtResource("77_bv7qx")
 texture_back = ExtResource("3_fos0i")
 
 [node name="18 La_Fede" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1347,12 +1310,11 @@ texture_front = ExtResource("78_5g1k7")
 texture_back = ExtResource("3_fos0i")
 
 [node name="19 La_Carità" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1363,12 +1325,11 @@ texture_front = ExtResource("79_o737a")
 texture_back = ExtResource("3_fos0i")
 
 [node name="20 Il_Fuoco" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1379,12 +1340,11 @@ texture_front = ExtResource("80_8g4l6")
 texture_back = ExtResource("3_fos0i")
 
 [node name="21 L\'Acqua" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1395,12 +1355,11 @@ texture_front = ExtResource("81_j5a2b")
 texture_back = ExtResource("3_fos0i")
 
 [node name="22 La_Terra" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1411,12 +1370,11 @@ texture_front = ExtResource("82_40txs")
 texture_back = ExtResource("3_fos0i")
 
 [node name="23 L\'Aria" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1427,12 +1385,11 @@ texture_front = ExtResource("83_ajgh3")
 texture_back = ExtResource("3_fos0i")
 
 [node name="24 La_Bilancia" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1443,12 +1400,11 @@ texture_front = ExtResource("84_1681s")
 texture_back = ExtResource("3_fos0i")
 
 [node name="25 La_Vergine" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1459,12 +1415,11 @@ texture_front = ExtResource("85_8ir7a")
 texture_back = ExtResource("3_fos0i")
 
 [node name="26 Il_Scorpione" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1475,12 +1430,11 @@ texture_front = ExtResource("86_xxmk3")
 texture_back = ExtResource("3_fos0i")
 
 [node name="27 L\'Ariete" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1491,12 +1445,11 @@ texture_front = ExtResource("87_dlu6c")
 texture_back = ExtResource("3_fos0i")
 
 [node name="28 Il_Capricorno" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1507,12 +1460,11 @@ texture_front = ExtResource("88_cf1h0")
 texture_back = ExtResource("3_fos0i")
 
 [node name="29 Il_Sagittario" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1523,12 +1475,11 @@ texture_front = ExtResource("89_22l73")
 texture_back = ExtResource("3_fos0i")
 
 [node name="30 Il_Cancro" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1539,12 +1490,11 @@ texture_front = ExtResource("90_yhm6q")
 texture_back = ExtResource("3_fos0i")
 
 [node name="31 I_Pesci" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1555,12 +1505,11 @@ texture_front = ExtResource("91_tn5hs")
 texture_back = ExtResource("3_fos0i")
 
 [node name="32 L\'Acquario" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1571,12 +1520,11 @@ texture_front = ExtResource("92_wlsl0")
 texture_back = ExtResource("3_fos0i")
 
 [node name="33 Il_Leone" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1587,12 +1535,11 @@ texture_front = ExtResource("93_4trvs")
 texture_back = ExtResource("3_fos0i")
 
 [node name="34 Il_Toro" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1603,12 +1550,11 @@ texture_front = ExtResource("94_r3hun")
 texture_back = ExtResource("3_fos0i")
 
 [node name="35 I_Gemelli" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1619,12 +1565,11 @@ texture_front = ExtResource("95_v7kft")
 texture_back = ExtResource("3_fos0i")
 
 [node name="36 La_Stella" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1635,12 +1580,11 @@ texture_front = ExtResource("96_qfdr7")
 texture_back = ExtResource("3_fos0i")
 
 [node name="37 La_Luna" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1651,12 +1595,11 @@ texture_front = ExtResource("97_4yt88")
 texture_back = ExtResource("3_fos0i")
 
 [node name="38 Il_Sole" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1667,12 +1610,11 @@ texture_front = ExtResource("98_33aut")
 texture_back = ExtResource("3_fos0i")
 
 [node name="39 Il_Mondo" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1683,12 +1625,11 @@ texture_front = ExtResource("99_w3oh2")
 texture_back = ExtResource("3_fos0i")
 
 [node name="40 Le_Trombe" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
@@ -1699,16 +1640,18 @@ texture_front = ExtResource("100_qseld")
 texture_back = ExtResource("3_fos0i")
 
 [node name="Il_Matto" type="TextureRect" parent="CardManager"]
-material = ExtResource("5_fos0i")
 layout_mode = 0
-offset_left = 512.0
-offset_top = 56.0
-offset_right = 652.0
-offset_bottom = 296.0
+offset_left = 968.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 263.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1
 script = ExtResource("2_uu6xs")
 suit = 4
-texture_front = ExtResource("4_3dxm6")
+texture_front = ExtResource("101_t31qo")
 texture_back = ExtResource("3_fos0i")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("103_siwj1")

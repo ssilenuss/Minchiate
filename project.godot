@@ -16,7 +16,7 @@ config/icon="uid://c8tprd0e8h2ds"
 
 [autoload]
 
-Global="*res://global.gd"
+Global="*res://Script/global.gd"
 
 [input]
 
@@ -28,6 +28,16 @@ left_click={
 right_click={
 "deadzone": 0.2,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(513, 21),"global_position":Vector2(522, 69),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+wheel_up={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":8,"position":Vector2(806, 22),"global_position":Vector2(825, 118),"factor":0.018,"button_index":4,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+wheel_down={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":16,"position":Vector2(311, 37),"global_position":Vector2(330, 133),"factor":0.018,"button_index":5,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
 

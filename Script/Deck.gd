@@ -10,7 +10,7 @@ func add_card(_card: Card)->void:
 		cards.append(_card)
 		print(self, " added to deck: ", cards)
 	else:
-		print(_card, " is already in this deck!")
+		print(_card, " is already in this deck!: ", cards)
 
 func remove_card(_card: Card)->void:
 	var card_idx : int = cards.find(_card)
@@ -19,6 +19,7 @@ func remove_card(_card: Card)->void:
 	else:
 		_card.deck = null
 		cards.erase(_card)
-		print(self, " removed from deck: ", cards)
+		#print(_card, " removed from deck: ", cards)
 	if cards.size()<=0:
+		#print(self, " freed!")
 		queue_free()
