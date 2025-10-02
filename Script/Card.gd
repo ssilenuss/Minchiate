@@ -44,7 +44,7 @@ var front := false :
 		else:
 			texture = texture_back
 
-var is_card_drop:=true
+var is_card_drop:=false
 
 
 

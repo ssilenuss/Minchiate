@@ -14,6 +14,8 @@ var game_state : int : set = set_game_state
 	
 var position_tween: Tween 
 
+var waiting_for_user: bool = false
+
 
 signal cards_ready
 
@@ -36,8 +38,11 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if game_state == states.RESTART:
 		set_game_state(states.CUTDECK)
-	if game_state == states.CUTDECK:
-		pass
+	if game_state == states.CUTDECK and waiting_for_user:
+		if Input.is_action_just_pressed("left_click") and card_manager.card_hovering:
+			cut_deck(card_manager.card_hovering)
+			print("deck cut")
+			
 
 func set_game_state(_state :int)->void:
 	game_state = _state
@@ -47,16 +52,32 @@ func set_game_state(_state :int)->void:
 		states.CUTDECK:
 			cards.shuffle()
 			
-			stack_cards(cards, Vector2.ZERO, 0.05)
-			await cards_ready
+			#stack_cards(cards, Vector2.ZERO, 0.05)
+			#await cards_ready
 			
-			var margin := Vector2(screen_size.x*.49, screen_size.y/10.0)
-			var end := Vector2(camera.left_node.global_position.x+margin.x, camera.bottom_node.global_position.y - margin.y*2.0)
-			var start := Vector2(camera.right_node.global_position.x-margin.x, camera.bottom_node.global_position.y - margin.y*2.0)
+			var margin := Vector2(screen_size.x*.49, screen_size.y*.495)
+			var end := Vector2(camera.left_node.global_position.x+margin.x, camera.bottom_node.position.y-margin.y)
+			var start := Vector2(camera.right_node.global_position.x-margin.x, camera.top_node.position.y+margin.y)
+			print(end, start)
 			
 			
 			create_card_line(cards, start, end, 0.1)
+			await cards_ready
+			waiting_for_user = true
 			
+
+func cut_deck(_card:Card)->void:
+	print(_card)
+	var idx : int = cards.find(_card)
+	var new_cards : Array[Card] = []
+	for i in range(idx, cards.size()):
+		#should reverse order of cards
+		new_cards.append(cards.pop_back())
+	
+	var new_pos:= Vector2(_card.position.x - _card.size.x*1.5, _card.position.y)
+	
+	stack_cards(new_cards,new_pos,0.02)
+	
 
 func place_cards_randomly_around_screen()->void:
 	#place cards randomly around an area
@@ -87,10 +108,10 @@ func create_card_line(_cards: Array[Card], _start: Vector2, _end: Vector2, _spee
 	cards_ready.emit()
 	
 func stack_cards(_cards: Array[Card], _pos: Vector2, _speed: float)->void:
-	card_manager.new_deck_from(cards[0])
+	card_manager.new_deck_from(_cards[0])
 	
 	for c in _cards:
-		card_manager.decks[0].add_card(c)
+		card_manager.decks[card_manager.decks.size()-1].add_card(c)
 		c.can_drag = false
 		c.set_hover(false)
 		c.move_to_front()
