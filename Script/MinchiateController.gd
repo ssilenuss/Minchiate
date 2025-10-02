@@ -29,18 +29,19 @@ func _ready() -> void:
 	randomize()
 
 	camera.screen_moved.connect(set_screen_positions)
-	set_screen_positions()
+	
 	
 	card_manager.new_deck()
 	for c in card_manager.get_children():
 		card_manager.decks[0].add_card(c)
 		c.position = Vector2.ZERO
+		c.prev_position = Vector2.ZERO
 	
 	active_deck = card_manager.decks[0]
 	
+	set_screen_positions()
+		
 	
-		
-		
 	
 	#place_cards_randomly_around_screen(active_deck)
 	set_game_state(states.RESTART)
@@ -67,6 +68,8 @@ func set_game_state(_state :int)->void:
 			create_card_line(active_deck, start, end, 0.02)
 			await cards_ready
 			waiting_for_user = true
+			print("went too far!")
+			
 			
 
 func cut_deck(_card:Card, _deck: Deck)->void:
@@ -170,18 +173,29 @@ func set_screen_positions()->void:
 	#set card offsetsd
 	for d in card_manager.decks:
 		for i in d.cards.size():
-			var scalor :float = 10.0
+			var scalor :float = card_manager.card_v_offset_scalor
 			var z_weight :float = i/ float(d.cards.size()) 
-			var card_pos : Vector2 = d.cards[i].global_position
+			z_weight *= scalor
+			var card_pos : Vector2 = d.cards[i].prev_position
 			var card_middle : Vector2 = card_pos + d.cards[i].size/2.0
-			var dist : Vector2 = card_middle - screen_center
-			var max_dist = Vector2(screen_edges.y, screen_edges.z)
-			var offset_weight = Vector2(dist.x/screen_size.x, dist.y/screen_size.y)
-			var new_pos = card_pos+offset_weight*z_weight
+			var dir : Vector2 = screen_center.direction_to(card_middle)
+			var noise_scalor : float = 10
+			var nudge := Vector2(noise.get_noise_1d(z_weight*noise_scalor), noise.get_noise_1d(-z_weight*noise_scalor))
+			#nudge *= noise_scalor
+			card_pos += (dir + nudge) * z_weight
+			
+			
+			#var dist : Vector2 = card_middle - screen_center
+			#var max_dist = Vector2(screen_edges.y, screen_edges.z)
+			#var offset_weight = Vector2(dist.x/screen_size.x, dist.y/screen_size.y)
+			#var new_pos = card_pos+offset_weight*z_weight
 			if i == d.cards.size()/2:
-				print(d.cards[i].global_position,d.cards[i].position,d.cards[i].prev_position )
+				#print(d.cards[i].global_position,d.cards[i].position,d.cards[i].prev_position )
+				pass
+			#d.cards[i].move( card_pos, camera.lerp_speed)
+			d.cards[i].position = card_pos
 			#d.cards[i].prev_position = d.cards[i].position
-			d.cards[i].shift_perspective(offset_weight*z_weight)
+			#d.cards[i].shift_perspective(offset_weight*z_weight)
 			#d.cards[i].z_offset = Vector2(offset, offset) 
 	#print(screen_center)
 	

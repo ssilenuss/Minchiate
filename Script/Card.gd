@@ -58,6 +58,7 @@ func _ready()->void:
 	mouse_exited.connect(_on_mouse_exited)
 	prev_position = position
 	prev_scale = scale
+	
 
 
 func _on_mouse_entered()->void:
@@ -92,7 +93,10 @@ func set_hover(_hover: bool):
 func shift_perspective(_offset: Vector2)->void:
 	global_position = prev_position + _offset
 	
+func get_positions()->PackedVector2Array:
+	var positions := [position, prev_position]
 	
+	return positions
 
 func move( _pos: Vector2, _speed: float)->void:
 	
@@ -102,3 +106,4 @@ func move( _pos: Vector2, _speed: float)->void:
 	position_tween = create_tween()
 	position_tween.set_parallel(true)
 	position_tween.tween_property(self, "position", _pos, _speed)
+	#position_tween.tween_callback(get_positions)
