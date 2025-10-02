@@ -1726,10 +1726,10 @@ texture_back = ExtResource("3_fos0i")
 [node name="Il_Matto" type="TextureRect" parent="CardManager"]
 material = ExtResource("7_cbpwj")
 layout_mode = 0
-offset_left = 968.0
-offset_top = 23.0
-offset_right = 1108.0
-offset_bottom = 263.0
+offset_left = 1229.0
+offset_top = -329.0
+offset_right = 1369.0
+offset_bottom = -89.0
 pivot_offset = Vector2(70, 120)
 texture = ExtResource("3_fos0i")
 expand_mode = 1

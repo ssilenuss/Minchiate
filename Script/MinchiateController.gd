@@ -50,7 +50,7 @@ func set_game_state(_state :int)->void:
 			stack_cards(cards, Vector2.ZERO, 0.05)
 			await cards_ready
 			
-			var margin := Vector2(screen_size.x/10.0, screen_size.y/10.0)
+			var margin := Vector2(screen_size.x*.49, screen_size.y/10.0)
 			var end := Vector2(camera.left_node.global_position.x+margin.x, camera.bottom_node.global_position.y - margin.y*2.0)
 			var start := Vector2(camera.right_node.global_position.x-margin.x, camera.bottom_node.global_position.y - margin.y*2.0)
 			
