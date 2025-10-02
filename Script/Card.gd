@@ -4,6 +4,7 @@ class_name Card
 #enum Suit {FIRE, WATER, AIR, EARTH}
 @export var can_drag : bool
 @export var deck : Deck
+@export var z_offset : Vector2 = Vector2.ZERO 
 
 enum Suits {BATONS, CUPS, SWORDS, COINS, TRUMPS}
 @export var suit : Suits = Suits.BATONS 
@@ -33,7 +34,8 @@ var hover_tween : Tween
 var position_tween : Tween
 
 
-var prev_position : Vector2
+var prev_position : Vector2 = Vector2.ZERO
+
 var prev_scale : Vector2
 
 var front := false :
@@ -57,7 +59,7 @@ func _ready()->void:
 	prev_position = position
 	prev_scale = scale
 
-	
+
 func _on_mouse_entered()->void:
 	#set_hover(true)
 	manager.set_card_hovering(self)
@@ -86,8 +88,14 @@ func set_hover(_hover: bool):
 		
 	else:
 		hover_tween.tween_property(self, "scale", prev_scale, hover_scale_speed)
+		
+func shift_perspective(_offset: Vector2)->void:
+	global_position = prev_position + _offset
+	
+	
 
 func move( _pos: Vector2, _speed: float)->void:
+	
 	if position_tween and position_tween.is_valid():
 			position_tween.kill()
 			position_tween = null

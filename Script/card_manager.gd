@@ -21,7 +21,7 @@ class_name CardManager
 		if get_child_count() > 0:
 			for c in get_children():
 				set_card_size(c)
-		
+@export_range(1,100, 0.1) var card_v_offset_scalor = 1.0
 @export var texture_back: Texture2D : 
 	set(value):
 		texture_back = value
@@ -42,7 +42,10 @@ var move_speed : float = 0.1
 var pile_offset : float = 1.0
 
 
+
 func _ready() -> void:
+
+	
 	if starting_drop:
 		new_deck_from(starting_drop)
 
@@ -140,6 +143,11 @@ func new_deck_from(_card: Card)->void:
 	d.position = _card.position
 	decks.append(d)
 	#print(decks.size(), " decks in play")
+	print_deck_info()
+
+func new_deck()->void:
+	var d := Deck.new()
+	decks.append(d)
 	print_deck_info()
 
 func set_card_drop(_card: Card)->void:

@@ -12,6 +12,8 @@ var top_node := Node2D.new()
 var bottom_node := Node2D.new()
 var nodes : Array[Node2D] = [left_node, right_node, top_node, bottom_node]
 
+signal screen_moved
+
 func _ready() -> void:
 	item_rect_changed.connect(_on_item_rect_changed)
 	for n in nodes:
@@ -21,22 +23,27 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("ui_left"):
 		target_position.x -= delta*move_speed
+		screen_moved.emit()
 	elif Input.is_action_pressed("ui_right"):
 		target_position.x += delta*move_speed
+		screen_moved.emit()
 		
 	if Input.is_action_pressed("ui_up"):
 		target_position.y -= delta*move_speed
+		screen_moved.emit()
 	elif Input.is_action_pressed("ui_down"):
 		target_position.y += delta*move_speed
-	
+		screen_moved.emit()
 	
 	if Input.is_action_just_pressed("wheel_down"):
 		var zoom_scale := Vector2.ONE *delta *zoom_speed
 		zoom += zoom_scale
+		screen_moved.emit()
 	elif Input.is_action_just_pressed("wheel_up"):
 		var zoom_scale := Vector2.ONE *delta *zoom_speed
 		if zoom.x - zoom_scale.x > 0 and zoom.y - zoom_scale.y:
 			zoom -= Vector2.ONE * delta * zoom_speed	
+		screen_moved.emit()
 	position = lerp(position, target_position, lerp_speed)
 	
 

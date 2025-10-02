@@ -13,7 +13,7 @@ func add_card(_card: Card)->void:
 	else:
 		print(_card, " is already in this deck!: ")
 
-func remove_card(_card: Card)->void:
+func remove_card(_card: Card)->Card:
 	var card_idx : int = cards.find(_card)
 	if card_idx == -1:
 		print(_card, " not found in deck ")
@@ -24,3 +24,4 @@ func remove_card(_card: Card)->void:
 	if cards.size()<=0:
 		#print(self, " freed!")
 		queue_free()
+	return _card
